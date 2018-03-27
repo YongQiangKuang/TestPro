@@ -10,9 +10,11 @@ import java.util.Calendar;
  * @version 1.0
  * @author: kyq1024
  * @timestamp: 2017-12-05 11:06
+ * -XX:+PrintGCDetails
  */
 public class StringTest {
     public static void main(String args[]){
+//        System.gc();
 //        cutYear();
 //        "11010111 0001 110001 110000 110000 110001 110101 110000 110000 110101 110001 110100 110000 110001 110010";
         strToBinstr("51 10015 005 14012");

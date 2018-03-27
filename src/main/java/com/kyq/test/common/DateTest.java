@@ -13,6 +13,10 @@ import java.util.Date;
  * @timestamp: 2017-11-03 15:04
  */
 public class DateTest {
+    public static int i = 1;
+    static {
+        System.out.println(i);
+    }
     public static void main(String args[]){
 //        System.out.println(parseDate("2017-08-09","yyyy-MM-dd"));
 //        System.out.println(parseDate("2017-8-9","yyyy-MM-dd"));
