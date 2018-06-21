@@ -17,9 +17,15 @@ public class StringTest {
 //        System.gc();
 //        cutYear();
 //        "11010111 0001 110001 110000 110000 110001 110101 110000 110000 110101 110001 110100 110000 110001 110010";
-        strToBinstr("51 10015 005 14012");
+//        strToBinstr("51 10015 005 14012");
+        substest();
     }
 
+    public static void substest(){
+        String str = "audit_status_desc";
+        System.out.println(str.substring(0,str.length()-5));
+
+    }
     public static void cutYear(){
         Calendar a = Calendar.getInstance();
         System.out.print( (a.get(Calendar.YEAR)+"").toString().substring(2));

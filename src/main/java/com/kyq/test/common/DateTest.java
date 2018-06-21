@@ -1,7 +1,9 @@
 package com.kyq.test.common;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Description:
@@ -14,17 +16,30 @@ import java.util.Date;
  */
 public class DateTest {
     public static int i = 1;
-    static {
-        System.out.println(i);
-    }
+//    static {
+//        System.out.println(i);
+//    }
     public static void main(String args[]){
 //        System.out.println(parseDate("2017-08-09","yyyy-MM-dd"));
 //        System.out.println(parseDate("2017-8-9","yyyy-MM-dd"));
-        String str = "2017-08-09T00";
-        System.out.println(str.substring(0,10));
-
+//        System.out.println(DateTest.class.getName());
+//        timeZoneChange();
 
     }
+    public static void timeZoneChange(){
+        String str = "2018-04-25 09:28:09";//PDT时间
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        try {
+            format.setTimeZone(TimeZone.getTimeZone("UTC"));
+            Date temp = format.parse(str);
+            System.out.println(format.format(temp));
+            System.out.println(temp);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static Date parseDate(String strDate, String datePattern) {
         Date retDate = null;
         if (strDate != null) {
