@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
 public class PortletToolbar  implements java.io.Serializable {
     public PortletToolbar() {

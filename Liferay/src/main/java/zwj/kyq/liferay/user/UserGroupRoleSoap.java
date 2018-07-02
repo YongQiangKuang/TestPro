@@ -1,34 +1,66 @@
 /**
- * UserGroupRolePK.java
+ * UserGroupRoleSoap.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
-public class UserGroupRolePK  implements java.io.Serializable {
+public class UserGroupRoleSoap  implements java.io.Serializable {
+    private long companyId;
+
     private long groupId;
+
+    private long mvccVersion;
+
+    private UserGroupRolePK primaryKey;
 
     private long roleId;
 
     private long userId;
 
-    public UserGroupRolePK() {
+    public UserGroupRoleSoap() {
     }
 
-    public UserGroupRolePK(
+    public UserGroupRoleSoap(
+           long companyId,
            long groupId,
+           long mvccVersion,
+           UserGroupRolePK primaryKey,
            long roleId,
            long userId) {
+           this.companyId = companyId;
            this.groupId = groupId;
+           this.mvccVersion = mvccVersion;
+           this.primaryKey = primaryKey;
            this.roleId = roleId;
            this.userId = userId;
     }
 
 
     /**
-     * Gets the groupId value for this UserGroupRolePK.
+     * Gets the companyId value for this UserGroupRoleSoap.
+     * 
+     * @return companyId
+     */
+    public long getCompanyId() {
+        return companyId;
+    }
+
+
+    /**
+     * Sets the companyId value for this UserGroupRoleSoap.
+     * 
+     * @param companyId
+     */
+    public void setCompanyId(long companyId) {
+        this.companyId = companyId;
+    }
+
+
+    /**
+     * Gets the groupId value for this UserGroupRoleSoap.
      * 
      * @return groupId
      */
@@ -38,7 +70,7 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
 
     /**
-     * Sets the groupId value for this UserGroupRolePK.
+     * Sets the groupId value for this UserGroupRoleSoap.
      * 
      * @param groupId
      */
@@ -48,7 +80,47 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
 
     /**
-     * Gets the roleId value for this UserGroupRolePK.
+     * Gets the mvccVersion value for this UserGroupRoleSoap.
+     * 
+     * @return mvccVersion
+     */
+    public long getMvccVersion() {
+        return mvccVersion;
+    }
+
+
+    /**
+     * Sets the mvccVersion value for this UserGroupRoleSoap.
+     * 
+     * @param mvccVersion
+     */
+    public void setMvccVersion(long mvccVersion) {
+        this.mvccVersion = mvccVersion;
+    }
+
+
+    /**
+     * Gets the primaryKey value for this UserGroupRoleSoap.
+     * 
+     * @return primaryKey
+     */
+    public UserGroupRolePK getPrimaryKey() {
+        return primaryKey;
+    }
+
+
+    /**
+     * Sets the primaryKey value for this UserGroupRoleSoap.
+     * 
+     * @param primaryKey
+     */
+    public void setPrimaryKey(UserGroupRolePK primaryKey) {
+        this.primaryKey = primaryKey;
+    }
+
+
+    /**
+     * Gets the roleId value for this UserGroupRoleSoap.
      * 
      * @return roleId
      */
@@ -58,7 +130,7 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
 
     /**
-     * Sets the roleId value for this UserGroupRolePK.
+     * Sets the roleId value for this UserGroupRoleSoap.
      * 
      * @param roleId
      */
@@ -68,7 +140,7 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
 
     /**
-     * Gets the userId value for this UserGroupRolePK.
+     * Gets the userId value for this UserGroupRoleSoap.
      * 
      * @return userId
      */
@@ -78,7 +150,7 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
 
     /**
-     * Sets the userId value for this UserGroupRolePK.
+     * Sets the userId value for this UserGroupRoleSoap.
      * 
      * @param userId
      */
@@ -88,8 +160,8 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof UserGroupRolePK)) return false;
-        UserGroupRolePK other = (UserGroupRolePK) obj;
+        if (!(obj instanceof UserGroupRoleSoap)) return false;
+        UserGroupRoleSoap other = (UserGroupRoleSoap) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -98,7 +170,12 @@ public class UserGroupRolePK  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
+            this.companyId == other.getCompanyId() &&
             this.groupId == other.getGroupId() &&
+            this.mvccVersion == other.getMvccVersion() &&
+            ((this.primaryKey==null && other.getPrimaryKey()==null) || 
+             (this.primaryKey!=null &&
+              this.primaryKey.equals(other.getPrimaryKey()))) &&
             this.roleId == other.getRoleId() &&
             this.userId == other.getUserId();
         __equalsCalc = null;
@@ -112,7 +189,12 @@ public class UserGroupRolePK  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
+        _hashCode += new Long(getCompanyId()).hashCode();
         _hashCode += new Long(getGroupId()).hashCode();
+        _hashCode += new Long(getMvccVersion()).hashCode();
+        if (getPrimaryKey() != null) {
+            _hashCode += getPrimaryKey().hashCode();
+        }
         _hashCode += new Long(getRoleId()).hashCode();
         _hashCode += new Long(getUserId()).hashCode();
         __hashCodeCalc = false;
@@ -121,15 +203,33 @@ public class UserGroupRolePK  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(UserGroupRolePK.class, true);
+        new org.apache.axis.description.TypeDesc(UserGroupRoleSoap.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://persistence.service.kernel.portal.liferay.com", "UserGroupRolePK"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserGroupRoleSoap"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("companyId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "companyId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("groupId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "groupId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("mvccVersion");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "mvccVersion"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("primaryKey");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "primaryKey"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://persistence.service.kernel.portal.liferay.com", "UserGroupRolePK"));
+        elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("roleId");

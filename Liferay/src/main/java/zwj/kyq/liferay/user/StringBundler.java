@@ -1,71 +1,71 @@
 /**
- * ModelPermissions.java
+ * StringBundler.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
-public class ModelPermissions  implements java.io.Serializable {
-    private boolean empty;
+public class StringBundler  implements java.io.Serializable {
+    private int index;
 
-    private java.lang.Object[] roleNames;
+    private java.lang.String[] strings;
 
-    public ModelPermissions() {
+    public StringBundler() {
     }
 
-    public ModelPermissions(
-           boolean empty,
-           java.lang.Object[] roleNames) {
-           this.empty = empty;
-           this.roleNames = roleNames;
-    }
-
-
-    /**
-     * Gets the empty value for this ModelPermissions.
-     * 
-     * @return empty
-     */
-    public boolean isEmpty() {
-        return empty;
+    public StringBundler(
+           int index,
+           java.lang.String[] strings) {
+           this.index = index;
+           this.strings = strings;
     }
 
 
     /**
-     * Sets the empty value for this ModelPermissions.
+     * Gets the index value for this StringBundler.
      * 
-     * @param empty
+     * @return index
      */
-    public void setEmpty(boolean empty) {
-        this.empty = empty;
+    public int getIndex() {
+        return index;
     }
 
 
     /**
-     * Gets the roleNames value for this ModelPermissions.
+     * Sets the index value for this StringBundler.
      * 
-     * @return roleNames
+     * @param index
      */
-    public java.lang.Object[] getRoleNames() {
-        return roleNames;
+    public void setIndex(int index) {
+        this.index = index;
     }
 
 
     /**
-     * Sets the roleNames value for this ModelPermissions.
+     * Gets the strings value for this StringBundler.
      * 
-     * @param roleNames
+     * @return strings
      */
-    public void setRoleNames(java.lang.Object[] roleNames) {
-        this.roleNames = roleNames;
+    public java.lang.String[] getStrings() {
+        return strings;
+    }
+
+
+    /**
+     * Sets the strings value for this StringBundler.
+     * 
+     * @param strings
+     */
+    public void setStrings(java.lang.String[] strings) {
+        this.strings = strings;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModelPermissions)) return false;
-        ModelPermissions other = (ModelPermissions) obj;
+        if (!(obj instanceof StringBundler)) return false;
+        StringBundler other = (StringBundler) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -74,10 +74,10 @@ public class ModelPermissions  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.empty == other.isEmpty() &&
-            ((this.roleNames==null && other.getRoleNames()==null) || 
-             (this.roleNames!=null &&
-              java.util.Arrays.equals(this.roleNames, other.getRoleNames())));
+            this.index == other.getIndex() &&
+            ((this.strings==null && other.getStrings()==null) || 
+             (this.strings!=null &&
+              java.util.Arrays.equals(this.strings, other.getStrings())));
         __equalsCalc = null;
         return _equals;
     }
@@ -89,12 +89,12 @@ public class ModelPermissions  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += (isEmpty() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getRoleNames() != null) {
+        _hashCode += getIndex();
+        if (getStrings() != null) {
             for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRoleNames());
+                 i<java.lang.reflect.Array.getLength(getStrings());
                  i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRoleNames(), i);
+                java.lang.Object obj = java.lang.reflect.Array.get(getStrings(), i);
                 if (obj != null &&
                     !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
@@ -107,20 +107,20 @@ public class ModelPermissions  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModelPermissions.class, true);
+        new org.apache.axis.description.TypeDesc(StringBundler.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://permission.service.kernel.portal.liferay.com", "ModelPermissions"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://util.kernel.portal.liferay.com", "StringBundler"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("empty");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "empty"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
+        elemField.setFieldName("index");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "index"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("roleNames");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "roleNames"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType"));
+        elemField.setFieldName("strings");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "strings"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
     }

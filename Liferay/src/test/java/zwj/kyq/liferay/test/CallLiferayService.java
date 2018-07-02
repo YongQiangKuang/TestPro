@@ -1,10 +1,10 @@
 package zwj.kyq.liferay.test;
 
 
-import zwj.kyq.liferay.ServiceContext;
-import zwj.kyq.liferay.UserServiceSoap;
-import zwj.kyq.liferay.UserServiceSoapServiceLocator;
-import zwj.kyq.liferay.UserSoap;
+import zwj.kyq.liferay.user.ServiceContext;
+import zwj.kyq.liferay.user.UserServiceSoap;
+import zwj.kyq.liferay.user.UserServiceSoapServiceLocator;
+import zwj.kyq.liferay.user.UserSoap;
 
 import javax.xml.rpc.ServiceException;
 import java.net.MalformedURLException;

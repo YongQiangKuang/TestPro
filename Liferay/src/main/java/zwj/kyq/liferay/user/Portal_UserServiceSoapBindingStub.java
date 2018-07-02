@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
-public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.Stub implements zwj.kyq.liferay.UserServiceSoap {
+public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.Stub implements UserServiceSoap {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -34,7 +34,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -146,22 +146,22 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), zwj.kyq.liferay.AddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), AddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), zwj.kyq.liferay.EmailAddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), EmailAddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), zwj.kyq.liferay.PhoneSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), PhoneSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), zwj.kyq.liferay.WebsiteSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), WebsiteSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), zwj.kyq.liferay.AnnouncementsDeliverySoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), AnnouncementsDeliverySoap[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sendEmail"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "addUserWithWorkflowReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -219,10 +219,10 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sendEmail"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "addUserWithWorkflowReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -278,22 +278,22 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), zwj.kyq.liferay.AddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), AddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), zwj.kyq.liferay.EmailAddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), EmailAddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), zwj.kyq.liferay.PhoneSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), PhoneSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), zwj.kyq.liferay.WebsiteSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), WebsiteSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), zwj.kyq.liferay.AnnouncementsDeliverySoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), AnnouncementsDeliverySoap[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sendEmail"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "addUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -351,10 +351,10 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sendEmail"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "addUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -414,7 +414,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "end"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap[].class);
+        oper.setReturnClass(UserSoap[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getCompanyUsersReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -423,7 +423,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCurrentUser");
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getCurrentUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -445,7 +445,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "groupId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap[].class);
+        oper.setReturnClass(UserSoap[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getGroupUsersReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -467,7 +467,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "organizationId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap[].class);
+        oper.setReturnClass(UserSoap[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getOrganizationUsersReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -496,7 +496,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddress"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getUserByEmailAddressReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -507,7 +507,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getUserByIdReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -520,7 +520,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "screenName"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getUserByScreenNameReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -531,7 +531,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap[].class);
+        oper.setReturnClass(UserSoap[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "getUserGroupUsersReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -687,7 +687,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -761,7 +761,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "agreedToTermsOfUse"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateAgreedToTermsOfUseReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -777,10 +777,10 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddress2"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateEmailAddressReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -832,10 +832,10 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "sendEmail"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateIncompleteUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -848,7 +848,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "lockout"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateLockoutByIdReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -861,7 +861,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "openId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateOpenIdReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -873,7 +873,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "organizationIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.RPC);
@@ -891,7 +891,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "passwordReset"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"), boolean.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updatePasswordReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -904,7 +904,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "bytes"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "base64Binary"), byte[].class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updatePortraitReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -924,7 +924,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "answer"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateReminderQueryReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -937,7 +937,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "screenName"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateScreenNameReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -950,7 +950,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "status"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateStatusReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -962,10 +962,10 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "status"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), int.class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateStatusReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -1043,24 +1043,24 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "roleIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupRoles"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap"), zwj.kyq.liferay.UserGroupRoleSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupRoles"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap"), UserGroupRoleSoap[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), zwj.kyq.liferay.AddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), AddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), zwj.kyq.liferay.EmailAddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), EmailAddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), zwj.kyq.liferay.PhoneSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), PhoneSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), zwj.kyq.liferay.WebsiteSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), WebsiteSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), zwj.kyq.liferay.AnnouncementsDeliverySoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), AnnouncementsDeliverySoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -1134,24 +1134,24 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "roleIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupRoles"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap"), zwj.kyq.liferay.UserGroupRoleSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupRoles"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap"), UserGroupRoleSoap[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), zwj.kyq.liferay.AddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "addresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap"), AddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), zwj.kyq.liferay.EmailAddressSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "emailAddresses"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap"), EmailAddressSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), zwj.kyq.liferay.PhoneSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "phones"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap"), PhoneSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), zwj.kyq.liferay.WebsiteSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "websites"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap"), WebsiteSoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), zwj.kyq.liferay.AnnouncementsDeliverySoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "announcementsDelivers"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap"), AnnouncementsDeliverySoap[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -1225,14 +1225,14 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "roleIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupRoles"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap"), zwj.kyq.liferay.UserGroupRoleSoap[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupRoles"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap"), UserGroupRoleSoap[].class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userGroupIds"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_xsd_long"), long[].class, false, false);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), zwj.kyq.liferay.ServiceContext.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "serviceContext"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext"), ServiceContext.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap"));
-        oper.setReturnClass(zwj.kyq.liferay.UserSoap.class);
+        oper.setReturnClass(UserSoap.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "updateUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.ENCODED);
@@ -1271,119 +1271,119 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://icon.configuration.portlet.kernel.portal.liferay.com", "PortletConfigurationIconMenu");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.PortletConfigurationIconMenu.class;
+            cls = PortletConfigurationIconMenu.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.announcements.liferay.com", "AnnouncementsDeliverySoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.AnnouncementsDeliverySoap.class;
+            cls = AnnouncementsDeliverySoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "AddressSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.AddressSoap.class;
+            cls = AddressSoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "EmailAddressSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.EmailAddressSoap.class;
+            cls = EmailAddressSoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "PhoneSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.PhoneSoap.class;
+            cls = PhoneSoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserGroupRoleSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.UserGroupRoleSoap.class;
+            cls = UserGroupRoleSoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.UserSoap.class;
+            cls = UserSoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "WebsiteSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.WebsiteSoap.class;
+            cls = WebsiteSoap.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://permission.service.kernel.portal.liferay.com", "ModelPermissions");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.ModelPermissions.class;
+            cls = ModelPermissions.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://persistence.service.kernel.portal.liferay.com", "UserGroupRolePK");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.UserGroupRolePK.class;
+            cls = UserGroupRolePK.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://service.kernel.portal.liferay.com", "ServiceContext");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.ServiceContext.class;
+            cls = ServiceContext.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://theme.kernel.portal.liferay.com", "PortletDisplay");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.PortletDisplay.class;
+            cls = PortletDisplay.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://theme.kernel.portal.liferay.com", "ThemeDisplay");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.ThemeDisplay.class;
+            cls = ThemeDisplay.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://toolbar.portlet.kernel.portal.liferay.com", "PortletToolbar");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.PortletToolbar.class;
+            cls = PortletToolbar.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://util.kernel.portal.liferay.com", "StringBundler");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.StringBundler.class;
+            cls = StringBundler.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://xml.apache.org/xml-soap", "mapItem");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.MapItem.class;
+            cls = MapItem.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns16_AnnouncementsDeliverySoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.AnnouncementsDeliverySoap[].class;
+            cls = AnnouncementsDeliverySoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.announcements.liferay.com", "AnnouncementsDeliverySoap");
             qName2 = null;
@@ -1392,7 +1392,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_AddressSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.AddressSoap[].class;
+            cls = AddressSoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "AddressSoap");
             qName2 = null;
@@ -1401,7 +1401,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_EmailAddressSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.EmailAddressSoap[].class;
+            cls = EmailAddressSoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "EmailAddressSoap");
             qName2 = null;
@@ -1410,7 +1410,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_PhoneSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.PhoneSoap[].class;
+            cls = PhoneSoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "PhoneSoap");
             qName2 = null;
@@ -1419,7 +1419,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserGroupRoleSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.UserGroupRoleSoap[].class;
+            cls = UserGroupRoleSoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserGroupRoleSoap");
             qName2 = null;
@@ -1428,7 +1428,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_UserSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.UserSoap[].class;
+            cls = UserSoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserSoap");
             qName2 = null;
@@ -1437,7 +1437,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 
             qName = new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "ArrayOf_tns6_WebsiteSoap");
             cachedSerQNames.add(qName);
-            cls = zwj.kyq.liferay.WebsiteSoap[].class;
+            cls = WebsiteSoap[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "WebsiteSoap");
             qName2 = null;
@@ -1538,7 +1538,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         }
     }
 
-    public void addGroupUsers(long groupId, long[] userIds, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public void addGroupUsers(long groupId, long[] userIds, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1682,7 +1682,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap addUserWithWorkflow(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, zwj.kyq.liferay.AddressSoap[] addresses, zwj.kyq.liferay.EmailAddressSoap[] emailAddresses, zwj.kyq.liferay.PhoneSoap[] phones, zwj.kyq.liferay.WebsiteSoap[] websites, zwj.kyq.liferay.AnnouncementsDeliverySoap[] announcementsDelivers, boolean sendEmail, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap addUserWithWorkflow(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, AddressSoap[] addresses, EmailAddressSoap[] emailAddresses, PhoneSoap[] phones, WebsiteSoap[] websites, AnnouncementsDeliverySoap[] announcementsDelivers, boolean sendEmail, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1703,9 +1703,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1713,7 +1713,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap addUserWithWorkflow(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, boolean sendEmail, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap addUserWithWorkflow(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, boolean sendEmail, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1734,9 +1734,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1744,7 +1744,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap addUser(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, zwj.kyq.liferay.AddressSoap[] addresses, zwj.kyq.liferay.EmailAddressSoap[] emailAddresses, zwj.kyq.liferay.PhoneSoap[] phones, zwj.kyq.liferay.WebsiteSoap[] websites, zwj.kyq.liferay.AnnouncementsDeliverySoap[] announcementsDelivers, boolean sendEmail, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap addUser(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, AddressSoap[] addresses, EmailAddressSoap[] emailAddresses, PhoneSoap[] phones, WebsiteSoap[] websites, AnnouncementsDeliverySoap[] announcementsDelivers, boolean sendEmail, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1765,9 +1765,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1775,7 +1775,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap addUser(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, boolean sendEmail, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap addUser(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, long[] userGroupIds, boolean sendEmail, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1796,9 +1796,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1909,7 +1909,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap[] getCompanyUsers(long companyId, int start, int end) throws java.rmi.RemoteException {
+    public UserSoap[] getCompanyUsers(long companyId, int start, int end) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1930,9 +1930,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap[]) _resp;
+                return (UserSoap[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap[].class);
+                return (UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1940,7 +1940,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap getCurrentUser() throws java.rmi.RemoteException {
+    public UserSoap getCurrentUser() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1961,9 +1961,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2002,7 +2002,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap[] getGroupUsers(long groupId) throws java.rmi.RemoteException {
+    public UserSoap[] getGroupUsers(long groupId) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2023,9 +2023,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap[]) _resp;
+                return (UserSoap[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap[].class);
+                return (UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2064,7 +2064,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap[] getOrganizationUsers(long organizationId) throws java.rmi.RemoteException {
+    public UserSoap[] getOrganizationUsers(long organizationId) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2085,9 +2085,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap[]) _resp;
+                return (UserSoap[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap[].class);
+                return (UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2126,7 +2126,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap getUserByEmailAddress(long companyId, java.lang.String emailAddress) throws java.rmi.RemoteException {
+    public UserSoap getUserByEmailAddress(long companyId, java.lang.String emailAddress) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2147,9 +2147,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2157,7 +2157,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap getUserById(long userId) throws java.rmi.RemoteException {
+    public UserSoap getUserById(long userId) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2178,9 +2178,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2188,7 +2188,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap getUserByScreenName(long companyId, java.lang.String screenName) throws java.rmi.RemoteException {
+    public UserSoap getUserByScreenName(long companyId, java.lang.String screenName) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2209,9 +2209,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2219,7 +2219,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap[] getUserGroupUsers(long userGroupId) throws java.rmi.RemoteException {
+    public UserSoap[] getUserGroupUsers(long userGroupId) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2240,9 +2240,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap[]) _resp;
+                return (UserSoap[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap[].class);
+                return (UserSoap[]) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2570,7 +2570,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public void unsetGroupUsers(long groupId, long[] userIds, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public void unsetGroupUsers(long groupId, long[] userIds, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2714,7 +2714,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateAgreedToTermsOfUse(long userId, boolean agreedToTermsOfUse) throws java.rmi.RemoteException {
+    public UserSoap updateAgreedToTermsOfUse(long userId, boolean agreedToTermsOfUse) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2735,9 +2735,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2745,7 +2745,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateEmailAddress(long userId, java.lang.String password, java.lang.String emailAddress1, java.lang.String emailAddress2, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap updateEmailAddress(long userId, java.lang.String password, java.lang.String emailAddress1, java.lang.String emailAddress2, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2766,9 +2766,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2776,7 +2776,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateIncompleteUser(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, boolean updateUserInformation, boolean sendEmail, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap updateIncompleteUser(long companyId, boolean autoPassword, java.lang.String password1, java.lang.String password2, boolean autoScreenName, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String locale, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String jobTitle, boolean updateUserInformation, boolean sendEmail, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2797,9 +2797,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2807,7 +2807,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateLockoutById(long userId, boolean lockout) throws java.rmi.RemoteException {
+    public UserSoap updateLockoutById(long userId, boolean lockout) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2828,9 +2828,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2838,7 +2838,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateOpenId(long userId, java.lang.String openId) throws java.rmi.RemoteException {
+    public UserSoap updateOpenId(long userId, java.lang.String openId) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2859,9 +2859,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2869,7 +2869,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public void updateOrganizations(long userId, long[] organizationIds, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public void updateOrganizations(long userId, long[] organizationIds, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2893,7 +2893,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updatePassword(long userId, java.lang.String password1, java.lang.String password2, boolean passwordReset) throws java.rmi.RemoteException {
+    public UserSoap updatePassword(long userId, java.lang.String password1, java.lang.String password2, boolean passwordReset) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2914,9 +2914,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2924,7 +2924,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updatePortrait(long userId, byte[] bytes) throws java.rmi.RemoteException {
+    public UserSoap updatePortrait(long userId, byte[] bytes) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2945,9 +2945,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2955,7 +2955,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateReminderQuery(long userId, java.lang.String question, java.lang.String answer) throws java.rmi.RemoteException {
+    public UserSoap updateReminderQuery(long userId, java.lang.String question, java.lang.String answer) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2976,9 +2976,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -2986,7 +2986,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateScreenName(long userId, java.lang.String screenName) throws java.rmi.RemoteException {
+    public UserSoap updateScreenName(long userId, java.lang.String screenName) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3007,9 +3007,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -3017,7 +3017,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateStatus(long userId, int status) throws java.rmi.RemoteException {
+    public UserSoap updateStatus(long userId, int status) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3038,9 +3038,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -3048,7 +3048,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateStatus(long userId, int status, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap updateStatus(long userId, int status, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3069,9 +3069,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -3079,7 +3079,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1, java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion, java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, boolean portrait, byte[] portraitBytes, java.lang.String languageId, java.lang.String timeZoneId, java.lang.String greeting, java.lang.String comments, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String smsSn, java.lang.String facebookSn, java.lang.String jabberSn, java.lang.String skypeSn, java.lang.String twitterSn, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, zwj.kyq.liferay.UserGroupRoleSoap[] userGroupRoles, long[] userGroupIds, zwj.kyq.liferay.AddressSoap[] addresses, zwj.kyq.liferay.EmailAddressSoap[] emailAddresses, zwj.kyq.liferay.PhoneSoap[] phones, zwj.kyq.liferay.WebsiteSoap[] websites, zwj.kyq.liferay.AnnouncementsDeliverySoap[] announcementsDelivers, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1, java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion, java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, boolean portrait, byte[] portraitBytes, java.lang.String languageId, java.lang.String timeZoneId, java.lang.String greeting, java.lang.String comments, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String smsSn, java.lang.String facebookSn, java.lang.String jabberSn, java.lang.String skypeSn, java.lang.String twitterSn, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, UserGroupRoleSoap[] userGroupRoles, long[] userGroupIds, AddressSoap[] addresses, EmailAddressSoap[] emailAddresses, PhoneSoap[] phones, WebsiteSoap[] websites, AnnouncementsDeliverySoap[] announcementsDelivers, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3100,9 +3100,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -3110,7 +3110,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1, java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion, java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String languageId, java.lang.String timeZoneId, java.lang.String greeting, java.lang.String comments, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String smsSn, java.lang.String facebookSn, java.lang.String jabberSn, java.lang.String skypeSn, java.lang.String twitterSn, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, zwj.kyq.liferay.UserGroupRoleSoap[] userGroupRoles, long[] userGroupIds, zwj.kyq.liferay.AddressSoap[] addresses, zwj.kyq.liferay.EmailAddressSoap[] emailAddresses, zwj.kyq.liferay.PhoneSoap[] phones, zwj.kyq.liferay.WebsiteSoap[] websites, zwj.kyq.liferay.AnnouncementsDeliverySoap[] announcementsDelivers, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1, java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion, java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String languageId, java.lang.String timeZoneId, java.lang.String greeting, java.lang.String comments, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String smsSn, java.lang.String facebookSn, java.lang.String jabberSn, java.lang.String skypeSn, java.lang.String twitterSn, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, UserGroupRoleSoap[] userGroupRoles, long[] userGroupIds, AddressSoap[] addresses, EmailAddressSoap[] emailAddresses, PhoneSoap[] phones, WebsiteSoap[] websites, AnnouncementsDeliverySoap[] announcementsDelivers, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3131,9 +3131,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -3141,7 +3141,7 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
 }
     }
 
-    public zwj.kyq.liferay.UserSoap updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1, java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion, java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String languageId, java.lang.String timeZoneId, java.lang.String greeting, java.lang.String comments, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String smsSn, java.lang.String facebookSn, java.lang.String jabberSn, java.lang.String skypeSn, java.lang.String twitterSn, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, zwj.kyq.liferay.UserGroupRoleSoap[] userGroupRoles, long[] userGroupIds, zwj.kyq.liferay.ServiceContext serviceContext) throws java.rmi.RemoteException {
+    public UserSoap updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1, java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion, java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress, long facebookId, java.lang.String openId, java.lang.String languageId, java.lang.String timeZoneId, java.lang.String greeting, java.lang.String comments, java.lang.String firstName, java.lang.String middleName, java.lang.String lastName, long prefixId, long suffixId, boolean male, int birthdayMonth, int birthdayDay, int birthdayYear, java.lang.String smsSn, java.lang.String facebookSn, java.lang.String jabberSn, java.lang.String skypeSn, java.lang.String twitterSn, java.lang.String jobTitle, long[] groupIds, long[] organizationIds, long[] roleIds, UserGroupRoleSoap[] userGroupRoles, long[] userGroupIds, ServiceContext serviceContext) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3162,9 +3162,9 @@ public class Portal_UserServiceSoapBindingStub extends org.apache.axis.client.St
         else {
             extractAttachments(_call);
             try {
-                return (zwj.kyq.liferay.UserSoap) _resp;
+                return (UserSoap) _resp;
             } catch (java.lang.Exception _exception) {
-                return (zwj.kyq.liferay.UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, zwj.kyq.liferay.UserSoap.class);
+                return (UserSoap) org.apache.axis.utils.JavaUtils.convert(_resp, UserSoap.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

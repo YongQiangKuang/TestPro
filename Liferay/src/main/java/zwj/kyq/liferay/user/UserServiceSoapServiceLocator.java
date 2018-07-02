@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
-public class UserServiceSoapServiceLocator extends org.apache.axis.client.Service implements zwj.kyq.liferay.UserServiceSoapService {
+public class UserServiceSoapServiceLocator extends org.apache.axis.client.Service implements UserServiceSoapService {
 
     public UserServiceSoapServiceLocator() {
     }
@@ -39,7 +39,7 @@ public class UserServiceSoapServiceLocator extends org.apache.axis.client.Servic
         Portal_UserServiceWSDDServiceName = name;
     }
 
-    public zwj.kyq.liferay.UserServiceSoap getPortal_UserService() throws javax.xml.rpc.ServiceException {
+    public UserServiceSoap getPortal_UserService() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(Portal_UserService_address);
@@ -50,9 +50,9 @@ public class UserServiceSoapServiceLocator extends org.apache.axis.client.Servic
         return getPortal_UserService(endpoint);
     }
 
-    public zwj.kyq.liferay.UserServiceSoap getPortal_UserService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public UserServiceSoap getPortal_UserService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            zwj.kyq.liferay.Portal_UserServiceSoapBindingStub _stub = new zwj.kyq.liferay.Portal_UserServiceSoapBindingStub(portAddress, this);
+            Portal_UserServiceSoapBindingStub _stub = new Portal_UserServiceSoapBindingStub(portAddress, this);
             _stub.setPortName(getPortal_UserServiceWSDDServiceName());
             return _stub;
         }
@@ -72,8 +72,8 @@ public class UserServiceSoapServiceLocator extends org.apache.axis.client.Servic
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (zwj.kyq.liferay.UserServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
-                zwj.kyq.liferay.Portal_UserServiceSoapBindingStub _stub = new zwj.kyq.liferay.Portal_UserServiceSoapBindingStub(new java.net.URL(Portal_UserService_address), this);
+            if (UserServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
+                Portal_UserServiceSoapBindingStub _stub = new Portal_UserServiceSoapBindingStub(new java.net.URL(Portal_UserService_address), this);
                 _stub.setPortName(getPortal_UserServiceWSDDServiceName());
                 return _stub;
             }

@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
 public class PortletDisplay  implements java.io.Serializable {
     private java.lang.String URLBack;
@@ -50,7 +50,7 @@ public class PortletDisplay  implements java.io.Serializable {
 
     private int columnPos;
 
-    private zwj.kyq.liferay.StringBundler content;
+    private StringBundler content;
 
     private java.lang.String customCSSClassName;
 
@@ -82,7 +82,7 @@ public class PortletDisplay  implements java.io.Serializable {
 
     private java.lang.String namespace;
 
-    private zwj.kyq.liferay.PortletConfigurationIconMenu portletConfigurationIconMenu;
+    private PortletConfigurationIconMenu portletConfigurationIconMenu;
 
     private boolean portletDecorate;
 
@@ -96,7 +96,7 @@ public class PortletDisplay  implements java.io.Serializable {
 
     private java.lang.Object portletSetup;
 
-    private zwj.kyq.liferay.PortletToolbar portletToolbar;
+    private PortletToolbar portletToolbar;
 
     private java.lang.String resourcePK;
 
@@ -142,7 +142,7 @@ public class PortletDisplay  implements java.io.Serializable {
 
     private boolean statePopUp;
 
-    private zwj.kyq.liferay.ThemeDisplay themeDisplay;
+    private ThemeDisplay themeDisplay;
 
     private java.lang.String title;
 
@@ -173,7 +173,7 @@ public class PortletDisplay  implements java.io.Serializable {
            int columnCount,
            java.lang.String columnId,
            int columnPos,
-           zwj.kyq.liferay.StringBundler content,
+           StringBundler content,
            java.lang.String customCSSClassName,
            java.lang.String description,
            boolean focused,
@@ -189,14 +189,14 @@ public class PortletDisplay  implements java.io.Serializable {
            boolean modePrint,
            boolean modeView,
            java.lang.String namespace,
-           zwj.kyq.liferay.PortletConfigurationIconMenu portletConfigurationIconMenu,
+           PortletConfigurationIconMenu portletConfigurationIconMenu,
            boolean portletDecorate,
            java.lang.String portletDecoratorId,
            java.lang.String portletDisplayName,
            java.lang.String portletName,
            java.lang.String portletResource,
            java.lang.Object portletSetup,
-           zwj.kyq.liferay.PortletToolbar portletToolbar,
+           PortletToolbar portletToolbar,
            java.lang.String resourcePK,
            boolean restoreCurrentView,
            java.lang.String rootPortletId,
@@ -219,7 +219,7 @@ public class PortletDisplay  implements java.io.Serializable {
            boolean stateMin,
            boolean stateNormal,
            boolean statePopUp,
-           zwj.kyq.liferay.ThemeDisplay themeDisplay,
+           ThemeDisplay themeDisplay,
            java.lang.String title,
            boolean webDAVEnabled) {
            this.URLBack = URLBack;
@@ -720,7 +720,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @return content
      */
-    public zwj.kyq.liferay.StringBundler getContent() {
+    public StringBundler getContent() {
         return content;
     }
 
@@ -730,7 +730,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @param content
      */
-    public void setContent(zwj.kyq.liferay.StringBundler content) {
+    public void setContent(StringBundler content) {
         this.content = content;
     }
 
@@ -1040,7 +1040,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @return portletConfigurationIconMenu
      */
-    public zwj.kyq.liferay.PortletConfigurationIconMenu getPortletConfigurationIconMenu() {
+    public PortletConfigurationIconMenu getPortletConfigurationIconMenu() {
         return portletConfigurationIconMenu;
     }
 
@@ -1050,7 +1050,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @param portletConfigurationIconMenu
      */
-    public void setPortletConfigurationIconMenu(zwj.kyq.liferay.PortletConfigurationIconMenu portletConfigurationIconMenu) {
+    public void setPortletConfigurationIconMenu(PortletConfigurationIconMenu portletConfigurationIconMenu) {
         this.portletConfigurationIconMenu = portletConfigurationIconMenu;
     }
 
@@ -1180,7 +1180,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @return portletToolbar
      */
-    public zwj.kyq.liferay.PortletToolbar getPortletToolbar() {
+    public PortletToolbar getPortletToolbar() {
         return portletToolbar;
     }
 
@@ -1190,7 +1190,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @param portletToolbar
      */
-    public void setPortletToolbar(zwj.kyq.liferay.PortletToolbar portletToolbar) {
+    public void setPortletToolbar(PortletToolbar portletToolbar) {
         this.portletToolbar = portletToolbar;
     }
 
@@ -1640,7 +1640,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @return themeDisplay
      */
-    public zwj.kyq.liferay.ThemeDisplay getThemeDisplay() {
+    public ThemeDisplay getThemeDisplay() {
         return themeDisplay;
     }
 
@@ -1650,7 +1650,7 @@ public class PortletDisplay  implements java.io.Serializable {
      * 
      * @param themeDisplay
      */
-    public void setThemeDisplay(zwj.kyq.liferay.ThemeDisplay themeDisplay) {
+    public void setThemeDisplay(ThemeDisplay themeDisplay) {
         this.themeDisplay = themeDisplay;
     }
 

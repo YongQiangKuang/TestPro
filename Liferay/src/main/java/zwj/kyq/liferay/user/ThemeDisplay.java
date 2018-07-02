@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
 public class ThemeDisplay  implements java.io.Serializable {
     private java.lang.String CDNBaseURL;
@@ -164,7 +164,7 @@ public class ThemeDisplay  implements java.io.Serializable {
 
     private java.lang.String portalURL;
 
-    private zwj.kyq.liferay.PortletDisplay portletDisplay;
+    private PortletDisplay portletDisplay;
 
     private java.lang.String ppid;
 
@@ -362,7 +362,7 @@ public class ThemeDisplay  implements java.io.Serializable {
            long plid,
            java.lang.String portalDomain,
            java.lang.String portalURL,
-           zwj.kyq.liferay.PortletDisplay portletDisplay,
+           PortletDisplay portletDisplay,
            java.lang.String ppid,
            java.lang.String protocol,
            java.lang.String realCompanyLogo,
@@ -2124,7 +2124,7 @@ public class ThemeDisplay  implements java.io.Serializable {
      * 
      * @return portletDisplay
      */
-    public zwj.kyq.liferay.PortletDisplay getPortletDisplay() {
+    public PortletDisplay getPortletDisplay() {
         return portletDisplay;
     }
 
@@ -2134,7 +2134,7 @@ public class ThemeDisplay  implements java.io.Serializable {
      * 
      * @param portletDisplay
      */
-    public void setPortletDisplay(zwj.kyq.liferay.PortletDisplay portletDisplay) {
+    public void setPortletDisplay(PortletDisplay portletDisplay) {
         this.portletDisplay = portletDisplay;
     }
 

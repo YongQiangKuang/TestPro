@@ -1,15 +1,13 @@
 /**
- * EmailAddressSoap.java
+ * WebsiteSoap.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
-public class EmailAddressSoap  implements java.io.Serializable {
-    private java.lang.String address;
-
+public class WebsiteSoap  implements java.io.Serializable {
     private long classNameId;
 
     private long classPK;
@@ -18,7 +16,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
     private java.util.Calendar createDate;
 
-    private long emailAddressId;
+    private java.util.Calendar lastPublishDate;
 
     private java.util.Calendar modifiedDate;
 
@@ -30,69 +28,55 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
     private long typeId;
 
+    private java.lang.String url;
+
     private long userId;
 
     private java.lang.String userName;
 
     private java.lang.String uuid;
 
-    public EmailAddressSoap() {
+    private long websiteId;
+
+    public WebsiteSoap() {
     }
 
-    public EmailAddressSoap(
-           java.lang.String address,
+    public WebsiteSoap(
            long classNameId,
            long classPK,
            long companyId,
            java.util.Calendar createDate,
-           long emailAddressId,
+           java.util.Calendar lastPublishDate,
            java.util.Calendar modifiedDate,
            long mvccVersion,
            boolean primary,
            long primaryKey,
            long typeId,
+           java.lang.String url,
            long userId,
            java.lang.String userName,
-           java.lang.String uuid) {
-           this.address = address;
+           java.lang.String uuid,
+           long websiteId) {
            this.classNameId = classNameId;
            this.classPK = classPK;
            this.companyId = companyId;
            this.createDate = createDate;
-           this.emailAddressId = emailAddressId;
+           this.lastPublishDate = lastPublishDate;
            this.modifiedDate = modifiedDate;
            this.mvccVersion = mvccVersion;
            this.primary = primary;
            this.primaryKey = primaryKey;
            this.typeId = typeId;
+           this.url = url;
            this.userId = userId;
            this.userName = userName;
            this.uuid = uuid;
+           this.websiteId = websiteId;
     }
 
 
     /**
-     * Gets the address value for this EmailAddressSoap.
-     * 
-     * @return address
-     */
-    public java.lang.String getAddress() {
-        return address;
-    }
-
-
-    /**
-     * Sets the address value for this EmailAddressSoap.
-     * 
-     * @param address
-     */
-    public void setAddress(java.lang.String address) {
-        this.address = address;
-    }
-
-
-    /**
-     * Gets the classNameId value for this EmailAddressSoap.
+     * Gets the classNameId value for this WebsiteSoap.
      * 
      * @return classNameId
      */
@@ -102,7 +86,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the classNameId value for this EmailAddressSoap.
+     * Sets the classNameId value for this WebsiteSoap.
      * 
      * @param classNameId
      */
@@ -112,7 +96,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the classPK value for this EmailAddressSoap.
+     * Gets the classPK value for this WebsiteSoap.
      * 
      * @return classPK
      */
@@ -122,7 +106,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the classPK value for this EmailAddressSoap.
+     * Sets the classPK value for this WebsiteSoap.
      * 
      * @param classPK
      */
@@ -132,7 +116,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the companyId value for this EmailAddressSoap.
+     * Gets the companyId value for this WebsiteSoap.
      * 
      * @return companyId
      */
@@ -142,7 +126,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the companyId value for this EmailAddressSoap.
+     * Sets the companyId value for this WebsiteSoap.
      * 
      * @param companyId
      */
@@ -152,7 +136,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the createDate value for this EmailAddressSoap.
+     * Gets the createDate value for this WebsiteSoap.
      * 
      * @return createDate
      */
@@ -162,7 +146,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the createDate value for this EmailAddressSoap.
+     * Sets the createDate value for this WebsiteSoap.
      * 
      * @param createDate
      */
@@ -172,27 +156,27 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the emailAddressId value for this EmailAddressSoap.
+     * Gets the lastPublishDate value for this WebsiteSoap.
      * 
-     * @return emailAddressId
+     * @return lastPublishDate
      */
-    public long getEmailAddressId() {
-        return emailAddressId;
+    public java.util.Calendar getLastPublishDate() {
+        return lastPublishDate;
     }
 
 
     /**
-     * Sets the emailAddressId value for this EmailAddressSoap.
+     * Sets the lastPublishDate value for this WebsiteSoap.
      * 
-     * @param emailAddressId
+     * @param lastPublishDate
      */
-    public void setEmailAddressId(long emailAddressId) {
-        this.emailAddressId = emailAddressId;
+    public void setLastPublishDate(java.util.Calendar lastPublishDate) {
+        this.lastPublishDate = lastPublishDate;
     }
 
 
     /**
-     * Gets the modifiedDate value for this EmailAddressSoap.
+     * Gets the modifiedDate value for this WebsiteSoap.
      * 
      * @return modifiedDate
      */
@@ -202,7 +186,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the modifiedDate value for this EmailAddressSoap.
+     * Sets the modifiedDate value for this WebsiteSoap.
      * 
      * @param modifiedDate
      */
@@ -212,7 +196,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the mvccVersion value for this EmailAddressSoap.
+     * Gets the mvccVersion value for this WebsiteSoap.
      * 
      * @return mvccVersion
      */
@@ -222,7 +206,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the mvccVersion value for this EmailAddressSoap.
+     * Sets the mvccVersion value for this WebsiteSoap.
      * 
      * @param mvccVersion
      */
@@ -232,7 +216,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the primary value for this EmailAddressSoap.
+     * Gets the primary value for this WebsiteSoap.
      * 
      * @return primary
      */
@@ -242,7 +226,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the primary value for this EmailAddressSoap.
+     * Sets the primary value for this WebsiteSoap.
      * 
      * @param primary
      */
@@ -252,7 +236,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the primaryKey value for this EmailAddressSoap.
+     * Gets the primaryKey value for this WebsiteSoap.
      * 
      * @return primaryKey
      */
@@ -262,7 +246,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the primaryKey value for this EmailAddressSoap.
+     * Sets the primaryKey value for this WebsiteSoap.
      * 
      * @param primaryKey
      */
@@ -272,7 +256,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the typeId value for this EmailAddressSoap.
+     * Gets the typeId value for this WebsiteSoap.
      * 
      * @return typeId
      */
@@ -282,7 +266,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the typeId value for this EmailAddressSoap.
+     * Sets the typeId value for this WebsiteSoap.
      * 
      * @param typeId
      */
@@ -292,7 +276,27 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the userId value for this EmailAddressSoap.
+     * Gets the url value for this WebsiteSoap.
+     * 
+     * @return url
+     */
+    public java.lang.String getUrl() {
+        return url;
+    }
+
+
+    /**
+     * Sets the url value for this WebsiteSoap.
+     * 
+     * @param url
+     */
+    public void setUrl(java.lang.String url) {
+        this.url = url;
+    }
+
+
+    /**
+     * Gets the userId value for this WebsiteSoap.
      * 
      * @return userId
      */
@@ -302,7 +306,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the userId value for this EmailAddressSoap.
+     * Sets the userId value for this WebsiteSoap.
      * 
      * @param userId
      */
@@ -312,7 +316,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the userName value for this EmailAddressSoap.
+     * Gets the userName value for this WebsiteSoap.
      * 
      * @return userName
      */
@@ -322,7 +326,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the userName value for this EmailAddressSoap.
+     * Sets the userName value for this WebsiteSoap.
      * 
      * @param userName
      */
@@ -332,7 +336,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the uuid value for this EmailAddressSoap.
+     * Gets the uuid value for this WebsiteSoap.
      * 
      * @return uuid
      */
@@ -342,7 +346,7 @@ public class EmailAddressSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the uuid value for this EmailAddressSoap.
+     * Sets the uuid value for this WebsiteSoap.
      * 
      * @param uuid
      */
@@ -350,10 +354,30 @@ public class EmailAddressSoap  implements java.io.Serializable {
         this.uuid = uuid;
     }
 
+
+    /**
+     * Gets the websiteId value for this WebsiteSoap.
+     * 
+     * @return websiteId
+     */
+    public long getWebsiteId() {
+        return websiteId;
+    }
+
+
+    /**
+     * Sets the websiteId value for this WebsiteSoap.
+     * 
+     * @param websiteId
+     */
+    public void setWebsiteId(long websiteId) {
+        this.websiteId = websiteId;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof EmailAddressSoap)) return false;
-        EmailAddressSoap other = (EmailAddressSoap) obj;
+        if (!(obj instanceof WebsiteSoap)) return false;
+        WebsiteSoap other = (WebsiteSoap) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -362,16 +386,15 @@ public class EmailAddressSoap  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.address==null && other.getAddress()==null) || 
-             (this.address!=null &&
-              this.address.equals(other.getAddress()))) &&
             this.classNameId == other.getClassNameId() &&
             this.classPK == other.getClassPK() &&
             this.companyId == other.getCompanyId() &&
             ((this.createDate==null && other.getCreateDate()==null) || 
              (this.createDate!=null &&
               this.createDate.equals(other.getCreateDate()))) &&
-            this.emailAddressId == other.getEmailAddressId() &&
+            ((this.lastPublishDate==null && other.getLastPublishDate()==null) || 
+             (this.lastPublishDate!=null &&
+              this.lastPublishDate.equals(other.getLastPublishDate()))) &&
             ((this.modifiedDate==null && other.getModifiedDate()==null) || 
              (this.modifiedDate!=null &&
               this.modifiedDate.equals(other.getModifiedDate()))) &&
@@ -379,13 +402,17 @@ public class EmailAddressSoap  implements java.io.Serializable {
             this.primary == other.isPrimary() &&
             this.primaryKey == other.getPrimaryKey() &&
             this.typeId == other.getTypeId() &&
+            ((this.url==null && other.getUrl()==null) || 
+             (this.url!=null &&
+              this.url.equals(other.getUrl()))) &&
             this.userId == other.getUserId() &&
             ((this.userName==null && other.getUserName()==null) || 
              (this.userName!=null &&
               this.userName.equals(other.getUserName()))) &&
             ((this.uuid==null && other.getUuid()==null) || 
              (this.uuid!=null &&
-              this.uuid.equals(other.getUuid())));
+              this.uuid.equals(other.getUuid()))) &&
+            this.websiteId == other.getWebsiteId();
         __equalsCalc = null;
         return _equals;
     }
@@ -397,16 +424,15 @@ public class EmailAddressSoap  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getAddress() != null) {
-            _hashCode += getAddress().hashCode();
-        }
         _hashCode += new Long(getClassNameId()).hashCode();
         _hashCode += new Long(getClassPK()).hashCode();
         _hashCode += new Long(getCompanyId()).hashCode();
         if (getCreateDate() != null) {
             _hashCode += getCreateDate().hashCode();
         }
-        _hashCode += new Long(getEmailAddressId()).hashCode();
+        if (getLastPublishDate() != null) {
+            _hashCode += getLastPublishDate().hashCode();
+        }
         if (getModifiedDate() != null) {
             _hashCode += getModifiedDate().hashCode();
         }
@@ -414,6 +440,9 @@ public class EmailAddressSoap  implements java.io.Serializable {
         _hashCode += (isPrimary() ? Boolean.TRUE : Boolean.FALSE).hashCode();
         _hashCode += new Long(getPrimaryKey()).hashCode();
         _hashCode += new Long(getTypeId()).hashCode();
+        if (getUrl() != null) {
+            _hashCode += getUrl().hashCode();
+        }
         _hashCode += new Long(getUserId()).hashCode();
         if (getUserName() != null) {
             _hashCode += getUserName().hashCode();
@@ -421,23 +450,18 @@ public class EmailAddressSoap  implements java.io.Serializable {
         if (getUuid() != null) {
             _hashCode += getUuid().hashCode();
         }
+        _hashCode += new Long(getWebsiteId()).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(EmailAddressSoap.class, true);
+        new org.apache.axis.description.TypeDesc(WebsiteSoap.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "EmailAddressSoap"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "WebsiteSoap"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("address");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("classNameId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "classNameId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
@@ -462,10 +486,10 @@ public class EmailAddressSoap  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailAddressId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "emailAddressId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
+        elemField.setFieldName("lastPublishDate");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "lastPublishDate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("modifiedDate");
@@ -498,6 +522,12 @@ public class EmailAddressSoap  implements java.io.Serializable {
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("url");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "url"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "userId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
@@ -514,6 +544,12 @@ public class EmailAddressSoap  implements java.io.Serializable {
         elemField.setXmlName(new javax.xml.namespace.QName("", "uuid"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
         elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("websiteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "websiteId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }
 

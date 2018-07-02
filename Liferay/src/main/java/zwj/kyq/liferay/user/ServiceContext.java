@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package zwj.kyq.liferay;
+package zwj.kyq.liferay.user;
 
 public class ServiceContext  implements java.io.Serializable {
     private boolean addGroupPermissions;
@@ -66,7 +66,7 @@ public class ServiceContext  implements java.io.Serializable {
 
     private java.lang.Object locale;
 
-    private zwj.kyq.liferay.ModelPermissions modelPermissions;
+    private ModelPermissions modelPermissions;
 
     private java.util.Calendar modifiedDate;
 
@@ -102,7 +102,7 @@ public class ServiceContext  implements java.io.Serializable {
 
     private boolean signedIn;
 
-    private zwj.kyq.liferay.ThemeDisplay themeDisplay;
+    private ThemeDisplay themeDisplay;
 
     private java.lang.Object timeZone;
 
@@ -151,7 +151,7 @@ public class ServiceContext  implements java.io.Serializable {
            java.lang.Object liferayPortletRequest,
            java.lang.Object liferayPortletResponse,
            java.lang.Object locale,
-           zwj.kyq.liferay.ModelPermissions modelPermissions,
+           ModelPermissions modelPermissions,
            java.util.Calendar modifiedDate,
            java.lang.String pathFriendlyURLPrivateGroup,
            java.lang.String pathFriendlyURLPrivateUser,
@@ -169,7 +169,7 @@ public class ServiceContext  implements java.io.Serializable {
            java.lang.Object scopeGroup,
            long scopeGroupId,
            boolean signedIn,
-           zwj.kyq.liferay.ThemeDisplay themeDisplay,
+           ThemeDisplay themeDisplay,
            java.lang.Object timeZone,
            java.lang.String userAgent,
            java.lang.String userDisplayURL,
@@ -820,7 +820,7 @@ public class ServiceContext  implements java.io.Serializable {
      * 
      * @return modelPermissions
      */
-    public zwj.kyq.liferay.ModelPermissions getModelPermissions() {
+    public ModelPermissions getModelPermissions() {
         return modelPermissions;
     }
 
@@ -830,7 +830,7 @@ public class ServiceContext  implements java.io.Serializable {
      * 
      * @param modelPermissions
      */
-    public void setModelPermissions(zwj.kyq.liferay.ModelPermissions modelPermissions) {
+    public void setModelPermissions(ModelPermissions modelPermissions) {
         this.modelPermissions = modelPermissions;
     }
 
@@ -1180,7 +1180,7 @@ public class ServiceContext  implements java.io.Serializable {
      * 
      * @return themeDisplay
      */
-    public zwj.kyq.liferay.ThemeDisplay getThemeDisplay() {
+    public ThemeDisplay getThemeDisplay() {
         return themeDisplay;
     }
 
@@ -1190,7 +1190,7 @@ public class ServiceContext  implements java.io.Serializable {
      * 
      * @param themeDisplay
      */
-    public void setThemeDisplay(zwj.kyq.liferay.ThemeDisplay themeDisplay) {
+    public void setThemeDisplay(ThemeDisplay themeDisplay) {
         this.themeDisplay = themeDisplay;
     }
 
