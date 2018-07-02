@@ -1,5 +1,6 @@
 package com.kyq.test.common;
 
+import java.sql.Timestamp;
 import java.util.Calendar;
 
 /**
@@ -18,7 +19,14 @@ public class StringTest {
 //        cutYear();
 //        "11010111 0001 110001 110000 110000 110001 110101 110000 110000 110101 110001 110100 110000 110001 110010";
 //        strToBinstr("51 10015 005 14012");
-        substest();
+//        substest();
+//        Timestamp timestamp = Timestamp.valueOf("2018-06-28 17:27:58.000000");
+//        System.out.println(timestamp);
+
+        Long l = new Long(1521);
+        long s = 2312L;
+        System.out.println(l+"");
+        System.out.println(s+"");
     }
 
     public static void substest(){

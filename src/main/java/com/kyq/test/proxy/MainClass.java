@@ -38,12 +38,12 @@ public class MainClass {
                 dynamicProxy);
 
         //wrong:class type cannot cast...
-        /*HelloIntf helloIntfProxy = (HelloIntf) Proxy.newProxyInstance(
+        /*HelloIntf helloIntfProxy2 = (HelloIntf) Proxy.newProxyInstance(
                 HelloIntf.class.getClassLoader(),
                 HelloIntf.class.getInterfaces(),
                 dynamicProxy);*/
-        //success.
-//        HelloIntf helloIntfProxy = (HelloIntf) Proxy.newProxyInstance(
+        //succes
+//        HelloIntf helloIntfProxy3 = (HelloIntf) Proxy.newProxyInstance(
 //                HelloImpl.class.getClassLoader(),
 //                HelloImpl.class.getInterfaces(),
 //                dynamicProxy);

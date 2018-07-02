@@ -31,16 +31,16 @@ public class RequestsTest {
         params.put("limit",5);
 
 
-        Requests.post(url)
-                .multiPartBody(
-                        Part.file("uploadFile",new File("C:\\Users\\kyq1024\\Desktop\\work\\sign1.png")),
-                        Part.file("uploadFile",new File("C:\\Users\\kyq1024\\Desktop\\work\\sign2.png")),
-                        Part.text("actionName","complaint-external-query"),
-                        Part.text("postData","{}")
-                ).send();
+//        Requests.post(url)
+//                .multiPartBody(
+//                        Part.file("uploadFile",new File("C:\\Users\\kyq1024\\Desktop\\work\\sign1.png")),
+//                        Part.file("uploadFile",new File("C:\\Users\\kyq1024\\Desktop\\work\\sign2.png")),
+//                        Part.text("actionName","complaint-external-query"),
+//                        Part.text("postData","{}")
+//                ).send();
 
-//        RawResponse send = Requests.post(url).body(params).send();
-//        String resp = send.readToText();
-//        System.out.println(resp);
+        RawResponse send = Requests.post(url).body(params).send();
+        String resp = send.readToText();
+        System.out.println(resp);
     }
 }

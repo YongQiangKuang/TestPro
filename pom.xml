@@ -139,5 +139,87 @@
             <artifactId>shiro-core</artifactId>
             <version>1.2.2</version>
         </dependency>
+
+        <!--========= liferay webservice调用依赖包 ==================================-->
+        <!-- https://mvnrepository.com/artifact/com.liferay.portal/portal-service -->
+        <!--<dependency>-->
+            <!--<groupId>com.liferay.portal</groupId>-->
+            <!--<artifactId>portal-client</artifactId>-->
+            <!--<version>7.0.0-local</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.liferay.portal/portal-client -->
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>portal-client</artifactId>
+            <version>7.0.0-local</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/axis/axis-jaxrpc -->
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>axis-jaxrpc</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-discovery/commons-discovery -->
+        <dependency>
+            <groupId>commons-discovery</groupId>
+            <artifactId>commons-discovery</artifactId>
+            <version>0.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>1.6.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <!--========= ./liferay webservice调用依赖包 ==================================-->
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>Sonatype</id>
+            <name>Sonatype Repository</name>
+            <url>http://repository.sonatype.org/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+             <snapshots>
+                 <enabled>false</enabled>
+             </snapshots>
+        </repository>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+     </repositories>
+
 </project>
