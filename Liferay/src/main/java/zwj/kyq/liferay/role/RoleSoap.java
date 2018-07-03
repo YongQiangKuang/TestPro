@@ -1,5 +1,5 @@
 /**
- * UserGroupSoap.java
+ * RoleSoap.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,8 +7,10 @@
 
 package zwj.kyq.liferay.role;
 
-public class UserGroupSoap  implements java.io.Serializable {
-    private boolean addedByLDAPImport;
+public class RoleSoap  implements java.io.Serializable {
+    private long classNameId;
+
+    private long classPK;
 
     private long companyId;
 
@@ -22,11 +24,15 @@ public class UserGroupSoap  implements java.io.Serializable {
 
     private java.lang.String name;
 
-    private long parentUserGroupId;
-
     private long primaryKey;
 
-    private long userGroupId;
+    private long roleId;
+
+    private java.lang.String subtype;
+
+    private java.lang.String title;
+
+    private int type;
 
     private long userId;
 
@@ -34,33 +40,39 @@ public class UserGroupSoap  implements java.io.Serializable {
 
     private java.lang.String uuid;
 
-    public UserGroupSoap() {
+    public RoleSoap() {
     }
 
-    public UserGroupSoap(
-           boolean addedByLDAPImport,
+    public RoleSoap(
+           long classNameId,
+           long classPK,
            long companyId,
            java.util.Calendar createDate,
            java.lang.String description,
            java.util.Calendar modifiedDate,
            long mvccVersion,
            java.lang.String name,
-           long parentUserGroupId,
            long primaryKey,
-           long userGroupId,
+           long roleId,
+           java.lang.String subtype,
+           java.lang.String title,
+           int type,
            long userId,
            java.lang.String userName,
            java.lang.String uuid) {
-           this.addedByLDAPImport = addedByLDAPImport;
+           this.classNameId = classNameId;
+           this.classPK = classPK;
            this.companyId = companyId;
            this.createDate = createDate;
            this.description = description;
            this.modifiedDate = modifiedDate;
            this.mvccVersion = mvccVersion;
            this.name = name;
-           this.parentUserGroupId = parentUserGroupId;
            this.primaryKey = primaryKey;
-           this.userGroupId = userGroupId;
+           this.roleId = roleId;
+           this.subtype = subtype;
+           this.title = title;
+           this.type = type;
            this.userId = userId;
            this.userName = userName;
            this.uuid = uuid;
@@ -68,27 +80,47 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the addedByLDAPImport value for this UserGroupSoap.
+     * Gets the classNameId value for this RoleSoap.
      * 
-     * @return addedByLDAPImport
+     * @return classNameId
      */
-    public boolean isAddedByLDAPImport() {
-        return addedByLDAPImport;
+    public long getClassNameId() {
+        return classNameId;
     }
 
 
     /**
-     * Sets the addedByLDAPImport value for this UserGroupSoap.
+     * Sets the classNameId value for this RoleSoap.
      * 
-     * @param addedByLDAPImport
+     * @param classNameId
      */
-    public void setAddedByLDAPImport(boolean addedByLDAPImport) {
-        this.addedByLDAPImport = addedByLDAPImport;
+    public void setClassNameId(long classNameId) {
+        this.classNameId = classNameId;
     }
 
 
     /**
-     * Gets the companyId value for this UserGroupSoap.
+     * Gets the classPK value for this RoleSoap.
+     * 
+     * @return classPK
+     */
+    public long getClassPK() {
+        return classPK;
+    }
+
+
+    /**
+     * Sets the classPK value for this RoleSoap.
+     * 
+     * @param classPK
+     */
+    public void setClassPK(long classPK) {
+        this.classPK = classPK;
+    }
+
+
+    /**
+     * Gets the companyId value for this RoleSoap.
      * 
      * @return companyId
      */
@@ -98,7 +130,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the companyId value for this UserGroupSoap.
+     * Sets the companyId value for this RoleSoap.
      * 
      * @param companyId
      */
@@ -108,7 +140,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the createDate value for this UserGroupSoap.
+     * Gets the createDate value for this RoleSoap.
      * 
      * @return createDate
      */
@@ -118,7 +150,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the createDate value for this UserGroupSoap.
+     * Sets the createDate value for this RoleSoap.
      * 
      * @param createDate
      */
@@ -128,7 +160,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the description value for this UserGroupSoap.
+     * Gets the description value for this RoleSoap.
      * 
      * @return description
      */
@@ -138,7 +170,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the description value for this UserGroupSoap.
+     * Sets the description value for this RoleSoap.
      * 
      * @param description
      */
@@ -148,7 +180,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the modifiedDate value for this UserGroupSoap.
+     * Gets the modifiedDate value for this RoleSoap.
      * 
      * @return modifiedDate
      */
@@ -158,7 +190,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the modifiedDate value for this UserGroupSoap.
+     * Sets the modifiedDate value for this RoleSoap.
      * 
      * @param modifiedDate
      */
@@ -168,7 +200,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the mvccVersion value for this UserGroupSoap.
+     * Gets the mvccVersion value for this RoleSoap.
      * 
      * @return mvccVersion
      */
@@ -178,7 +210,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the mvccVersion value for this UserGroupSoap.
+     * Sets the mvccVersion value for this RoleSoap.
      * 
      * @param mvccVersion
      */
@@ -188,7 +220,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the name value for this UserGroupSoap.
+     * Gets the name value for this RoleSoap.
      * 
      * @return name
      */
@@ -198,7 +230,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the name value for this UserGroupSoap.
+     * Sets the name value for this RoleSoap.
      * 
      * @param name
      */
@@ -208,27 +240,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the parentUserGroupId value for this UserGroupSoap.
-     * 
-     * @return parentUserGroupId
-     */
-    public long getParentUserGroupId() {
-        return parentUserGroupId;
-    }
-
-
-    /**
-     * Sets the parentUserGroupId value for this UserGroupSoap.
-     * 
-     * @param parentUserGroupId
-     */
-    public void setParentUserGroupId(long parentUserGroupId) {
-        this.parentUserGroupId = parentUserGroupId;
-    }
-
-
-    /**
-     * Gets the primaryKey value for this UserGroupSoap.
+     * Gets the primaryKey value for this RoleSoap.
      * 
      * @return primaryKey
      */
@@ -238,7 +250,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the primaryKey value for this UserGroupSoap.
+     * Sets the primaryKey value for this RoleSoap.
      * 
      * @param primaryKey
      */
@@ -248,27 +260,87 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the userGroupId value for this UserGroupSoap.
+     * Gets the roleId value for this RoleSoap.
      * 
-     * @return userGroupId
+     * @return roleId
      */
-    public long getUserGroupId() {
-        return userGroupId;
+    public long getRoleId() {
+        return roleId;
     }
 
 
     /**
-     * Sets the userGroupId value for this UserGroupSoap.
+     * Sets the roleId value for this RoleSoap.
      * 
-     * @param userGroupId
+     * @param roleId
      */
-    public void setUserGroupId(long userGroupId) {
-        this.userGroupId = userGroupId;
+    public void setRoleId(long roleId) {
+        this.roleId = roleId;
     }
 
 
     /**
-     * Gets the userId value for this UserGroupSoap.
+     * Gets the subtype value for this RoleSoap.
+     * 
+     * @return subtype
+     */
+    public java.lang.String getSubtype() {
+        return subtype;
+    }
+
+
+    /**
+     * Sets the subtype value for this RoleSoap.
+     * 
+     * @param subtype
+     */
+    public void setSubtype(java.lang.String subtype) {
+        this.subtype = subtype;
+    }
+
+
+    /**
+     * Gets the title value for this RoleSoap.
+     * 
+     * @return title
+     */
+    public java.lang.String getTitle() {
+        return title;
+    }
+
+
+    /**
+     * Sets the title value for this RoleSoap.
+     * 
+     * @param title
+     */
+    public void setTitle(java.lang.String title) {
+        this.title = title;
+    }
+
+
+    /**
+     * Gets the type value for this RoleSoap.
+     * 
+     * @return type
+     */
+    public int getType() {
+        return type;
+    }
+
+
+    /**
+     * Sets the type value for this RoleSoap.
+     * 
+     * @param type
+     */
+    public void setType(int type) {
+        this.type = type;
+    }
+
+
+    /**
+     * Gets the userId value for this RoleSoap.
      * 
      * @return userId
      */
@@ -278,7 +350,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the userId value for this UserGroupSoap.
+     * Sets the userId value for this RoleSoap.
      * 
      * @param userId
      */
@@ -288,7 +360,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the userName value for this UserGroupSoap.
+     * Gets the userName value for this RoleSoap.
      * 
      * @return userName
      */
@@ -298,7 +370,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the userName value for this UserGroupSoap.
+     * Sets the userName value for this RoleSoap.
      * 
      * @param userName
      */
@@ -308,7 +380,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Gets the uuid value for this UserGroupSoap.
+     * Gets the uuid value for this RoleSoap.
      * 
      * @return uuid
      */
@@ -318,7 +390,7 @@ public class UserGroupSoap  implements java.io.Serializable {
 
 
     /**
-     * Sets the uuid value for this UserGroupSoap.
+     * Sets the uuid value for this RoleSoap.
      * 
      * @param uuid
      */
@@ -328,8 +400,8 @@ public class UserGroupSoap  implements java.io.Serializable {
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof UserGroupSoap)) return false;
-        UserGroupSoap other = (UserGroupSoap) obj;
+        if (!(obj instanceof RoleSoap)) return false;
+        RoleSoap other = (RoleSoap) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -338,7 +410,8 @@ public class UserGroupSoap  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.addedByLDAPImport == other.isAddedByLDAPImport() &&
+            this.classNameId == other.getClassNameId() &&
+            this.classPK == other.getClassPK() &&
             this.companyId == other.getCompanyId() &&
             ((this.createDate==null && other.getCreateDate()==null) || 
              (this.createDate!=null &&
@@ -353,9 +426,15 @@ public class UserGroupSoap  implements java.io.Serializable {
             ((this.name==null && other.getName()==null) || 
              (this.name!=null &&
               this.name.equals(other.getName()))) &&
-            this.parentUserGroupId == other.getParentUserGroupId() &&
             this.primaryKey == other.getPrimaryKey() &&
-            this.userGroupId == other.getUserGroupId() &&
+            this.roleId == other.getRoleId() &&
+            ((this.subtype==null && other.getSubtype()==null) || 
+             (this.subtype!=null &&
+              this.subtype.equals(other.getSubtype()))) &&
+            ((this.title==null && other.getTitle()==null) || 
+             (this.title!=null &&
+              this.title.equals(other.getTitle()))) &&
+            this.type == other.getType() &&
             this.userId == other.getUserId() &&
             ((this.userName==null && other.getUserName()==null) || 
              (this.userName!=null &&
@@ -374,7 +453,8 @@ public class UserGroupSoap  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += (isAddedByLDAPImport() ? Boolean.TRUE : Boolean.FALSE).hashCode();
+        _hashCode += new Long(getClassNameId()).hashCode();
+        _hashCode += new Long(getClassPK()).hashCode();
         _hashCode += new Long(getCompanyId()).hashCode();
         if (getCreateDate() != null) {
             _hashCode += getCreateDate().hashCode();
@@ -389,9 +469,15 @@ public class UserGroupSoap  implements java.io.Serializable {
         if (getName() != null) {
             _hashCode += getName().hashCode();
         }
-        _hashCode += new Long(getParentUserGroupId()).hashCode();
         _hashCode += new Long(getPrimaryKey()).hashCode();
-        _hashCode += new Long(getUserGroupId()).hashCode();
+        _hashCode += new Long(getRoleId()).hashCode();
+        if (getSubtype() != null) {
+            _hashCode += getSubtype().hashCode();
+        }
+        if (getTitle() != null) {
+            _hashCode += getTitle().hashCode();
+        }
+        _hashCode += getType();
         _hashCode += new Long(getUserId()).hashCode();
         if (getUserName() != null) {
             _hashCode += getUserName().hashCode();
@@ -405,14 +491,20 @@ public class UserGroupSoap  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(UserGroupSoap.class, true);
+        new org.apache.axis.description.TypeDesc(RoleSoap.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "UserGroupSoap"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://model.kernel.portal.liferay.com", "RoleSoap"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("addedByLDAPImport");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "addedByLDAPImport"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
+        elemField.setFieldName("classNameId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "classNameId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("classPK");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "classPK"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
@@ -452,21 +544,33 @@ public class UserGroupSoap  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("parentUserGroupId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "parentUserGroupId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("primaryKey");
         elemField.setXmlName(new javax.xml.namespace.QName("", "primaryKey"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userGroupId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "userGroupId"));
+        elemField.setFieldName("roleId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "roleId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("subtype");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "subtype"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("title");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "title"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("type");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "type"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

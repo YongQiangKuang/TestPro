@@ -1,5 +1,5 @@
 /**
- * UserGroupServiceSoapServiceLocator.java
+ * RoleServiceSoapServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package zwj.kyq.liferay.role;
 
-public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.Service implements zwj.kyq.liferay.role.UserGroupServiceSoapService {
+public class RoleServiceSoapServiceLocator extends org.apache.axis.client.Service implements zwj.kyq.liferay.role.RoleServiceSoapService {
 
-    public UserGroupServiceSoapServiceLocator() {
+    public RoleServiceSoapServiceLocator() {
     }
 
 
-    public UserGroupServiceSoapServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public RoleServiceSoapServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public UserGroupServiceSoapServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public RoleServiceSoapServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for Portal_UserGroupService
-    private java.lang.String Portal_UserGroupService_address = "http://127.0.0.1:8080/api/axis/Portal_UserGroupService";
+    // Use to get a proxy class for Portal_RoleService
+    private java.lang.String Portal_RoleService_address = "http://127.0.0.1:8080/api/axis/Portal_RoleService";
 
-    public java.lang.String getPortal_UserGroupServiceAddress() {
-        return Portal_UserGroupService_address;
+    public java.lang.String getPortal_RoleServiceAddress() {
+        return Portal_RoleService_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String Portal_UserGroupServiceWSDDServiceName = "Portal_UserGroupService";
+    private java.lang.String Portal_RoleServiceWSDDServiceName = "Portal_RoleService";
 
-    public java.lang.String getPortal_UserGroupServiceWSDDServiceName() {
-        return Portal_UserGroupServiceWSDDServiceName;
+    public java.lang.String getPortal_RoleServiceWSDDServiceName() {
+        return Portal_RoleServiceWSDDServiceName;
     }
 
-    public void setPortal_UserGroupServiceWSDDServiceName(java.lang.String name) {
-        Portal_UserGroupServiceWSDDServiceName = name;
+    public void setPortal_RoleServiceWSDDServiceName(java.lang.String name) {
+        Portal_RoleServiceWSDDServiceName = name;
     }
 
-    public zwj.kyq.liferay.role.UserGroupServiceSoap getPortal_UserGroupService() throws javax.xml.rpc.ServiceException {
+    public zwj.kyq.liferay.role.RoleServiceSoap getPortal_RoleService() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(Portal_UserGroupService_address);
+            endpoint = new java.net.URL(Portal_RoleService_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getPortal_UserGroupService(endpoint);
+        return getPortal_RoleService(endpoint);
     }
 
-    public zwj.kyq.liferay.role.UserGroupServiceSoap getPortal_UserGroupService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public zwj.kyq.liferay.role.RoleServiceSoap getPortal_RoleService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            zwj.kyq.liferay.role.Portal_UserGroupServiceSoapBindingStub _stub = new zwj.kyq.liferay.role.Portal_UserGroupServiceSoapBindingStub(portAddress, this);
-            _stub.setPortName(getPortal_UserGroupServiceWSDDServiceName());
+            zwj.kyq.liferay.role.Portal_RoleServiceSoapBindingStub _stub = new zwj.kyq.liferay.role.Portal_RoleServiceSoapBindingStub(portAddress, this);
+            _stub.setPortName(getPortal_RoleServiceWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.S
         }
     }
 
-    public void setPortal_UserGroupServiceEndpointAddress(java.lang.String address) {
-        Portal_UserGroupService_address = address;
+    public void setPortal_RoleServiceEndpointAddress(java.lang.String address) {
+        Portal_RoleService_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.S
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (zwj.kyq.liferay.role.UserGroupServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
-                zwj.kyq.liferay.role.Portal_UserGroupServiceSoapBindingStub _stub = new zwj.kyq.liferay.role.Portal_UserGroupServiceSoapBindingStub(new java.net.URL(Portal_UserGroupService_address), this);
-                _stub.setPortName(getPortal_UserGroupServiceWSDDServiceName());
+            if (zwj.kyq.liferay.role.RoleServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
+                zwj.kyq.liferay.role.Portal_RoleServiceSoapBindingStub _stub = new zwj.kyq.liferay.role.Portal_RoleServiceSoapBindingStub(new java.net.URL(Portal_RoleService_address), this);
+                _stub.setPortName(getPortal_RoleServiceWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.S
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("Portal_UserGroupService".equals(inputPortName)) {
-            return getPortal_UserGroupService();
+        if ("Portal_RoleService".equals(inputPortName)) {
+            return getPortal_RoleService();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.S
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "UserGroupServiceSoapService");
+        return new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "RoleServiceSoapService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.S
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "Portal_UserGroupService"));
+            ports.add(new javax.xml.namespace.QName("urn:http.service.portal.liferay.com", "Portal_RoleService"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class UserGroupServiceSoapServiceLocator extends org.apache.axis.client.S
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("Portal_UserGroupService".equals(portName)) {
-            setPortal_UserGroupServiceEndpointAddress(address);
+if ("Portal_RoleService".equals(portName)) {
+            setPortal_RoleServiceEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

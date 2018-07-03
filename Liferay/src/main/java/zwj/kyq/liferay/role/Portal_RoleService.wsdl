@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:http.service.portal.liferay.com" xmlns:intf="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://model.kernel.portal.liferay.com" xmlns:tns10="http://device.mobile.kernel.portal.liferay.com" xmlns:tns11="http://permission.security.kernel.portal.liferay.com" xmlns:tns12="http://util.kernel.portal.liferay.com" xmlns:tns13="http://icon.configuration.portlet.kernel.portal.liferay.com" xmlns:tns14="http://toolbar.portlet.kernel.portal.liferay.com" xmlns:tns2="http://service.kernel.portal.liferay.com" xmlns:tns3="http://portlet.kernel.portal.liferay.com" xmlns:tns4="http://util.java" xmlns:tns5="http://permission.service.kernel.portal.liferay.com" xmlns:tns6="http://http.servlet.javax" xmlns:tns7="http://theme.kernel.portal.liferay.com" xmlns:tns8="http://kernel.rules.device.mobile.liferay.com" xmlns:tns9="http://portlet.javax" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:http.service.portal.liferay.com">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:http.service.portal.liferay.com" xmlns:intf="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://service.kernel.portal.liferay.com" xmlns:tns10="http://device.mobile.kernel.portal.liferay.com" xmlns:tns11="http://permission.security.kernel.portal.liferay.com" xmlns:tns12="http://util.kernel.portal.liferay.com" xmlns:tns13="http://icon.configuration.portlet.kernel.portal.liferay.com" xmlns:tns14="http://toolbar.portlet.kernel.portal.liferay.com" xmlns:tns2="http://portlet.kernel.portal.liferay.com" xmlns:tns3="http://util.java" xmlns:tns4="http://permission.service.kernel.portal.liferay.com" xmlns:tns5="http://model.kernel.portal.liferay.com" xmlns:tns6="http://http.servlet.javax" xmlns:tns7="http://theme.kernel.portal.liferay.com" xmlns:tns8="http://kernel.rules.device.mobile.liferay.com" xmlns:tns9="http://portlet.javax" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:http.service.portal.liferay.com">
 	<!--WSDL created by Apache Axis version: 1.4Built on Apr 22, 2006 (06:55:48 PDT)-->
 	<wsdl:types>
 		<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:http.service.portal.liferay.com">
@@ -20,17 +20,17 @@
 			<import namespace="http://util.kernel.portal.liferay.com"/>
 			<import namespace="http://permission.security.kernel.portal.liferay.com"/>
 			<import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
-			<complexType name="ArrayOf_xsd_long">
-				<complexContent>
-					<restriction base="soapenc:Array">
-						<attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:long[]"/>
-					</restriction>
-				</complexContent>
-			</complexType>
 			<complexType name="ArrayOf_xsd_string">
 				<complexContent>
 					<restriction base="soapenc:Array">
 						<attribute ref="soapenc:arrayType" wsdl:arrayType="soapenc:string[]"/>
+					</restriction>
+				</complexContent>
+			</complexType>
+			<complexType name="ArrayOf_xsd_long">
+				<complexContent>
+					<restriction base="soapenc:Array">
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:long[]"/>
 					</restriction>
 				</complexContent>
 			</complexType>
@@ -41,47 +41,26 @@
 					</restriction>
 				</complexContent>
 			</complexType>
-			<complexType name="ArrayOf_tns2_UserGroupSoap">
+			<complexType name="ArrayOf_tns2_RoleSoap">
 				<complexContent>
 					<restriction base="soapenc:Array">
-						<attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:UserGroupSoap[]"/>
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="tns5:RoleSoap[]"/>
 					</restriction>
 				</complexContent>
 			</complexType>
-		</schema>
-		<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://model.kernel.portal.liferay.com">
-			<import namespace="http://portlet.javax"/>
-			<import namespace="urn:http.service.portal.liferay.com"/>
-			<import namespace="http://xml.apache.org/xml-soap"/>
-			<import namespace="http://toolbar.portlet.kernel.portal.liferay.com"/>
-			<import namespace="http://icon.configuration.portlet.kernel.portal.liferay.com"/>
-			<import namespace="http://kernel.rules.device.mobile.liferay.com"/>
-			<import namespace="http://device.mobile.kernel.portal.liferay.com"/>
-			<import namespace="http://permission.service.kernel.portal.liferay.com"/>
-			<import namespace="http://portlet.kernel.portal.liferay.com"/>
-			<import namespace="http://service.kernel.portal.liferay.com"/>
-			<import namespace="http://http.servlet.javax"/>
-			<import namespace="http://util.java"/>
-			<import namespace="http://theme.kernel.portal.liferay.com"/>
-			<import namespace="http://util.kernel.portal.liferay.com"/>
-			<import namespace="http://permission.security.kernel.portal.liferay.com"/>
-			<import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
-			<complexType name="UserGroupSoap">
-				<sequence>
-					<element name="addedByLDAPImport" type="xsd:boolean"/>
-					<element name="companyId" type="xsd:long"/>
-					<element name="createDate" nillable="true" type="xsd:dateTime"/>
-					<element name="description" nillable="true" type="soapenc:string"/>
-					<element name="modifiedDate" nillable="true" type="xsd:dateTime"/>
-					<element name="mvccVersion" type="xsd:long"/>
-					<element name="name" nillable="true" type="soapenc:string"/>
-					<element name="parentUserGroupId" type="xsd:long"/>
-					<element name="primaryKey" type="xsd:long"/>
-					<element name="userGroupId" type="xsd:long"/>
-					<element name="userId" type="xsd:long"/>
-					<element name="userName" nillable="true" type="soapenc:string"/>
-					<element name="uuid" nillable="true" type="soapenc:string"/>
-				</sequence>
+			<complexType name="ArrayOf_xsd_int">
+				<complexContent>
+					<restriction base="soapenc:Array">
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:int[]"/>
+					</restriction>
+				</complexContent>
+			</complexType>
+			<complexType name="ArrayOf_tns2_GroupSoap">
+				<complexContent>
+					<restriction base="soapenc:Array">
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="tns5:GroupSoap[]"/>
+					</restriction>
+				</complexContent>
 			</complexType>
 		</schema>
 		<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.apache.org/xml-soap">
@@ -490,7 +469,7 @@
 					<element name="liferayPortletRequest" nillable="true" type="xsd:anyType"/>
 					<element name="liferayPortletResponse" nillable="true" type="xsd:anyType"/>
 					<element name="locale" nillable="true" type="xsd:anyType"/>
-					<element name="modelPermissions" nillable="true" type="tns5:ModelPermissions"/>
+					<element name="modelPermissions" nillable="true" type="tns4:ModelPermissions"/>
 					<element name="modifiedDate" nillable="true" type="xsd:dateTime"/>
 					<element name="pathFriendlyURLPrivateGroup" nillable="true" type="soapenc:string"/>
 					<element name="pathFriendlyURLPrivateUser" nillable="true" type="soapenc:string"/>
@@ -519,283 +498,427 @@
 				</sequence>
 			</complexType>
 		</schema>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://model.kernel.portal.liferay.com">
+			<import namespace="http://portlet.javax"/>
+			<import namespace="urn:http.service.portal.liferay.com"/>
+			<import namespace="http://xml.apache.org/xml-soap"/>
+			<import namespace="http://toolbar.portlet.kernel.portal.liferay.com"/>
+			<import namespace="http://icon.configuration.portlet.kernel.portal.liferay.com"/>
+			<import namespace="http://kernel.rules.device.mobile.liferay.com"/>
+			<import namespace="http://device.mobile.kernel.portal.liferay.com"/>
+			<import namespace="http://permission.service.kernel.portal.liferay.com"/>
+			<import namespace="http://portlet.kernel.portal.liferay.com"/>
+			<import namespace="http://service.kernel.portal.liferay.com"/>
+			<import namespace="http://http.servlet.javax"/>
+			<import namespace="http://util.java"/>
+			<import namespace="http://theme.kernel.portal.liferay.com"/>
+			<import namespace="http://util.kernel.portal.liferay.com"/>
+			<import namespace="http://permission.security.kernel.portal.liferay.com"/>
+			<import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<complexType name="RoleSoap">
+				<sequence>
+					<element name="classNameId" type="xsd:long"/>
+					<element name="classPK" type="xsd:long"/>
+					<element name="companyId" type="xsd:long"/>
+					<element name="createDate" nillable="true" type="xsd:dateTime"/>
+					<element name="description" nillable="true" type="soapenc:string"/>
+					<element name="modifiedDate" nillable="true" type="xsd:dateTime"/>
+					<element name="mvccVersion" type="xsd:long"/>
+					<element name="name" nillable="true" type="soapenc:string"/>
+					<element name="primaryKey" type="xsd:long"/>
+					<element name="roleId" type="xsd:long"/>
+					<element name="subtype" nillable="true" type="soapenc:string"/>
+					<element name="title" nillable="true" type="soapenc:string"/>
+					<element name="type" type="xsd:int"/>
+					<element name="userId" type="xsd:long"/>
+					<element name="userName" nillable="true" type="soapenc:string"/>
+					<element name="uuid" nillable="true" type="soapenc:string"/>
+				</sequence>
+			</complexType>
+			<complexType name="GroupSoap">
+				<sequence>
+					<element name="active" type="xsd:boolean"/>
+					<element name="classNameId" type="xsd:long"/>
+					<element name="classPK" type="xsd:long"/>
+					<element name="companyId" type="xsd:long"/>
+					<element name="creatorUserId" type="xsd:long"/>
+					<element name="description" nillable="true" type="soapenc:string"/>
+					<element name="friendlyURL" nillable="true" type="soapenc:string"/>
+					<element name="groupId" type="xsd:long"/>
+					<element name="groupKey" nillable="true" type="soapenc:string"/>
+					<element name="inheritContent" type="xsd:boolean"/>
+					<element name="liveGroupId" type="xsd:long"/>
+					<element name="manualMembership" type="xsd:boolean"/>
+					<element name="membershipRestriction" type="xsd:int"/>
+					<element name="mvccVersion" type="xsd:long"/>
+					<element name="name" nillable="true" type="soapenc:string"/>
+					<element name="parentGroupId" type="xsd:long"/>
+					<element name="primaryKey" type="xsd:long"/>
+					<element name="remoteStagingGroupCount" type="xsd:int"/>
+					<element name="site" type="xsd:boolean"/>
+					<element name="treePath" nillable="true" type="soapenc:string"/>
+					<element name="type" type="xsd:int"/>
+					<element name="typeSettings" nillable="true" type="soapenc:string"/>
+					<element name="uuid" nillable="true" type="soapenc:string"/>
+				</sequence>
+			</complexType>
+		</schema>
 	</wsdl:types>
-	<wsdl:message name="addUserGroupResponse1">
-		<wsdl:part name="addUserGroupReturn" type="tns1:UserGroupSoap"/>
+	<wsdl:message name="hasUserRolesRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="companyId" type="xsd:long"/>
+		<wsdl:part name="names" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="inherited" type="xsd:boolean"/>
 	</wsdl:message>
-	<wsdl:message name="fetchUserGroupRequest">
-		<wsdl:part name="userGroupId" type="xsd:long"/>
+	<wsdl:message name="getRoleResponse1">
+		<wsdl:part name="getRoleReturn" type="tns5:RoleSoap"/>
 	</wsdl:message>
-	<wsdl:message name="deleteUserGroupResponse"/>
-	<wsdl:message name="getUserGroupRequest1">
-		<wsdl:part name="name" type="xsd:string"/>
-	</wsdl:message>
-	<wsdl:message name="deleteUserGroupRequest">
-		<wsdl:part name="userGroupId" type="xsd:long"/>
-	</wsdl:message>
-	<wsdl:message name="addGroupUserGroupsResponse"/>
-	<wsdl:message name="addUserGroupRequest1">
-		<wsdl:part name="name" type="xsd:string"/>
-		<wsdl:part name="description" type="xsd:string"/>
-		<wsdl:part name="serviceContext" type="tns2:ServiceContext"/>
-	</wsdl:message>
-	<wsdl:message name="unsetTeamUserGroupsResponse"/>
-	<wsdl:message name="unsetGroupUserGroupsRequest">
-		<wsdl:part name="groupId" type="xsd:long"/>
-		<wsdl:part name="userGroupIds" type="intf:ArrayOf_xsd_long"/>
-	</wsdl:message>
-	<wsdl:message name="getUserUserGroupsRequest">
+	<wsdl:message name="getUserRolesRequest">
 		<wsdl:part name="userId" type="xsd:long"/>
 	</wsdl:message>
-	<wsdl:message name="updateUserGroupRequest1">
-		<wsdl:part name="userGroupId" type="xsd:long"/>
-		<wsdl:part name="name" type="xsd:string"/>
-		<wsdl:part name="description" type="xsd:string"/>
-		<wsdl:part name="serviceContext" type="tns2:ServiceContext"/>
-	</wsdl:message>
-	<wsdl:message name="getUserGroupRequest">
-		<wsdl:part name="userGroupId" type="xsd:long"/>
-	</wsdl:message>
-	<wsdl:message name="unsetTeamUserGroupsRequest">
-		<wsdl:part name="teamId" type="xsd:long"/>
-		<wsdl:part name="userGroupIds" type="intf:ArrayOf_xsd_long"/>
-	</wsdl:message>
-	<wsdl:message name="getUserGroupResponse">
-		<wsdl:part name="getUserGroupReturn" type="tns1:UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="updateUserGroupResponse">
-		<wsdl:part name="updateUserGroupReturn" type="tns1:UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="addGroupUserGroupsRequest">
-		<wsdl:part name="groupId" type="xsd:long"/>
-		<wsdl:part name="userGroupIds" type="intf:ArrayOf_xsd_long"/>
-	</wsdl:message>
-	<wsdl:message name="addUserGroupRequest">
-		<wsdl:part name="name" type="xsd:string"/>
-		<wsdl:part name="description" type="xsd:string"/>
-	</wsdl:message>
-	<wsdl:message name="addUserGroupResponse">
-		<wsdl:part name="addUserGroupReturn" type="tns1:UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="fetchUserGroupResponse">
-		<wsdl:part name="fetchUserGroupReturn" type="tns1:UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="updateUserGroupResponse1">
-		<wsdl:part name="updateUserGroupReturn" type="tns1:UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="getUserUserGroupsResponse">
-		<wsdl:part name="getUserUserGroupsReturn" type="intf:ArrayOf_tns2_UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="getUserGroupResponse1">
-		<wsdl:part name="getUserGroupReturn" type="tns1:UserGroupSoap"/>
-	</wsdl:message>
-	<wsdl:message name="unsetGroupUserGroupsResponse"/>
-	<wsdl:message name="addTeamUserGroupsRequest">
-		<wsdl:part name="teamId" type="xsd:long"/>
-		<wsdl:part name="userGroupIds" type="intf:ArrayOf_xsd_long"/>
-	</wsdl:message>
-	<wsdl:message name="updateUserGroupRequest">
-		<wsdl:part name="userGroupId" type="xsd:long"/>
-		<wsdl:part name="name" type="xsd:string"/>
-		<wsdl:part name="description" type="xsd:string"/>
-	</wsdl:message>
-	<wsdl:message name="addTeamUserGroupsResponse"/>
-	<wsdl:message name="getUserGroupsRequest">
+	<wsdl:message name="addUserRolesResponse"/>
+	<wsdl:message name="getRoleRequest1">
 		<wsdl:part name="companyId" type="xsd:long"/>
+		<wsdl:part name="name" type="xsd:string"/>
 	</wsdl:message>
-	<wsdl:message name="getUserGroupsResponse">
-		<wsdl:part name="getUserGroupsReturn" type="intf:ArrayOf_tns2_UserGroupSoap"/>
+	<wsdl:message name="getUserRelatedRolesRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="groups" type="intf:ArrayOf_tns2_GroupSoap"/>
 	</wsdl:message>
-	<wsdl:portType name="UserGroupServiceSoap">
-		<wsdl:operation name="addGroupUserGroups" parameterOrder="groupId userGroupIds">
-			<wsdl:input message="intf:addGroupUserGroupsRequest" name="addGroupUserGroupsRequest"/>
-			<wsdl:output message="intf:addGroupUserGroupsResponse" name="addGroupUserGroupsResponse"/>
+	<wsdl:message name="getGroupRolesResponse">
+		<wsdl:part name="getGroupRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="unsetUserRolesRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="roleIds" type="intf:ArrayOf_xsd_long"/>
+	</wsdl:message>
+	<wsdl:message name="updateRoleRequest">
+		<wsdl:part name="roleId" type="xsd:long"/>
+		<wsdl:part name="name" type="xsd:string"/>
+		<wsdl:part name="titleMapLanguageIds" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="titleMapValues" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="descriptionMapLanguageIds" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="descriptionMapValues" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="subtype" type="xsd:string"/>
+		<wsdl:part name="serviceContext" type="tns1:ServiceContext"/>
+	</wsdl:message>
+	<wsdl:message name="deleteRoleResponse"/>
+	<wsdl:message name="getUserGroupGroupRolesRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="groupId" type="xsd:long"/>
+	</wsdl:message>
+	<wsdl:message name="addRoleResponse">
+		<wsdl:part name="addRoleReturn" type="tns5:RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="deleteRoleRequest">
+		<wsdl:part name="roleId" type="xsd:long"/>
+	</wsdl:message>
+	<wsdl:message name="getRoleResponse">
+		<wsdl:part name="getRoleReturn" type="tns5:RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="unsetUserRolesResponse"/>
+	<wsdl:message name="getUserGroupRolesResponse">
+		<wsdl:part name="getUserGroupRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="addUserRolesRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="roleIds" type="intf:ArrayOf_xsd_long"/>
+	</wsdl:message>
+	<wsdl:message name="fetchRoleRequest">
+		<wsdl:part name="roleId" type="xsd:long"/>
+	</wsdl:message>
+	<wsdl:message name="hasUserRolesResponse">
+		<wsdl:part name="hasUserRolesReturn" type="xsd:boolean"/>
+	</wsdl:message>
+	<wsdl:message name="getRoleRequest">
+		<wsdl:part name="roleId" type="xsd:long"/>
+	</wsdl:message>
+	<wsdl:message name="hasUserRoleResponse">
+		<wsdl:part name="hasUserRoleReturn" type="xsd:boolean"/>
+	</wsdl:message>
+	<wsdl:message name="getRolesResponse1">
+		<wsdl:part name="getRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="fetchRoleResponse">
+		<wsdl:part name="fetchRoleReturn" type="tns5:RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="getRolesRequest1">
+		<wsdl:part name="companyId" type="xsd:long"/>
+		<wsdl:part name="types" type="intf:ArrayOf_xsd_int"/>
+	</wsdl:message>
+	<wsdl:message name="getGroupRolesRequest">
+		<wsdl:part name="groupId" type="xsd:long"/>
+	</wsdl:message>
+	<wsdl:message name="hasUserRoleRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="companyId" type="xsd:long"/>
+		<wsdl:part name="name" type="xsd:string"/>
+		<wsdl:part name="inherited" type="xsd:boolean"/>
+	</wsdl:message>
+	<wsdl:message name="getUserGroupGroupRolesResponse">
+		<wsdl:part name="getUserGroupGroupRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="getRolesResponse">
+		<wsdl:part name="getRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="addRoleRequest">
+		<wsdl:part name="className" type="xsd:string"/>
+		<wsdl:part name="classPK" type="xsd:long"/>
+		<wsdl:part name="name" type="xsd:string"/>
+		<wsdl:part name="titleMapLanguageIds" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="titleMapValues" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="descriptionMapLanguageIds" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="descriptionMapValues" type="intf:ArrayOf_xsd_string"/>
+		<wsdl:part name="type" type="xsd:int"/>
+		<wsdl:part name="subtype" type="xsd:string"/>
+		<wsdl:part name="serviceContext" type="tns1:ServiceContext"/>
+	</wsdl:message>
+	<wsdl:message name="getRolesRequest">
+		<wsdl:part name="type" type="xsd:int"/>
+		<wsdl:part name="subtype" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="updateRoleResponse">
+		<wsdl:part name="updateRoleReturn" type="tns5:RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="getUserRolesResponse">
+		<wsdl:part name="getUserRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:message name="getUserGroupRolesRequest">
+		<wsdl:part name="userId" type="xsd:long"/>
+		<wsdl:part name="groupId" type="xsd:long"/>
+	</wsdl:message>
+	<wsdl:message name="getUserRelatedRolesResponse">
+		<wsdl:part name="getUserRelatedRolesReturn" type="intf:ArrayOf_tns2_RoleSoap"/>
+	</wsdl:message>
+	<wsdl:portType name="RoleServiceSoap">
+		<wsdl:operation name="addRole" parameterOrder="className classPK name titleMapLanguageIds titleMapValues descriptionMapLanguageIds descriptionMapValues type subtype serviceContext">
+			<wsdl:input message="intf:addRoleRequest" name="addRoleRequest"/>
+			<wsdl:output message="intf:addRoleResponse" name="addRoleResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="addTeamUserGroups" parameterOrder="teamId userGroupIds">
-			<wsdl:input message="intf:addTeamUserGroupsRequest" name="addTeamUserGroupsRequest"/>
-			<wsdl:output message="intf:addTeamUserGroupsResponse" name="addTeamUserGroupsResponse"/>
+		<wsdl:operation name="addUserRoles" parameterOrder="userId roleIds">
+			<wsdl:input message="intf:addUserRolesRequest" name="addUserRolesRequest"/>
+			<wsdl:output message="intf:addUserRolesResponse" name="addUserRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="addUserGroup" parameterOrder="name description">
-			<wsdl:input message="intf:addUserGroupRequest" name="addUserGroupRequest"/>
-			<wsdl:output message="intf:addUserGroupResponse" name="addUserGroupResponse"/>
+		<wsdl:operation name="deleteRole" parameterOrder="roleId">
+			<wsdl:input message="intf:deleteRoleRequest" name="deleteRoleRequest"/>
+			<wsdl:output message="intf:deleteRoleResponse" name="deleteRoleResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="addUserGroup" parameterOrder="name description serviceContext">
-			<wsdl:input message="intf:addUserGroupRequest1" name="addUserGroupRequest1"/>
-			<wsdl:output message="intf:addUserGroupResponse1" name="addUserGroupResponse1"/>
+		<wsdl:operation name="fetchRole" parameterOrder="roleId">
+			<wsdl:input message="intf:fetchRoleRequest" name="fetchRoleRequest"/>
+			<wsdl:output message="intf:fetchRoleResponse" name="fetchRoleResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="deleteUserGroup" parameterOrder="userGroupId">
-			<wsdl:input message="intf:deleteUserGroupRequest" name="deleteUserGroupRequest"/>
-			<wsdl:output message="intf:deleteUserGroupResponse" name="deleteUserGroupResponse"/>
+		<wsdl:operation name="getGroupRoles" parameterOrder="groupId">
+			<wsdl:input message="intf:getGroupRolesRequest" name="getGroupRolesRequest"/>
+			<wsdl:output message="intf:getGroupRolesResponse" name="getGroupRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="fetchUserGroup" parameterOrder="userGroupId">
-			<wsdl:input message="intf:fetchUserGroupRequest" name="fetchUserGroupRequest"/>
-			<wsdl:output message="intf:fetchUserGroupResponse" name="fetchUserGroupResponse"/>
+		<wsdl:operation name="getRole" parameterOrder="roleId">
+			<wsdl:input message="intf:getRoleRequest" name="getRoleRequest"/>
+			<wsdl:output message="intf:getRoleResponse" name="getRoleResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="getUserGroup" parameterOrder="userGroupId">
-			<wsdl:input message="intf:getUserGroupRequest" name="getUserGroupRequest"/>
-			<wsdl:output message="intf:getUserGroupResponse" name="getUserGroupResponse"/>
+		<wsdl:operation name="getRole" parameterOrder="companyId name">
+			<wsdl:input message="intf:getRoleRequest1" name="getRoleRequest1"/>
+			<wsdl:output message="intf:getRoleResponse1" name="getRoleResponse1"/>
 		</wsdl:operation>
-		<wsdl:operation name="getUserGroup" parameterOrder="name">
-			<wsdl:input message="intf:getUserGroupRequest1" name="getUserGroupRequest1"/>
-			<wsdl:output message="intf:getUserGroupResponse1" name="getUserGroupResponse1"/>
+		<wsdl:operation name="getRoles" parameterOrder="type subtype">
+			<wsdl:input message="intf:getRolesRequest" name="getRolesRequest"/>
+			<wsdl:output message="intf:getRolesResponse" name="getRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="getUserGroups" parameterOrder="companyId">
-			<wsdl:input message="intf:getUserGroupsRequest" name="getUserGroupsRequest"/>
-			<wsdl:output message="intf:getUserGroupsResponse" name="getUserGroupsResponse"/>
+		<wsdl:operation name="getRoles" parameterOrder="companyId types">
+			<wsdl:input message="intf:getRolesRequest1" name="getRolesRequest1"/>
+			<wsdl:output message="intf:getRolesResponse1" name="getRolesResponse1"/>
 		</wsdl:operation>
-		<wsdl:operation name="getUserUserGroups" parameterOrder="userId">
-			<wsdl:input message="intf:getUserUserGroupsRequest" name="getUserUserGroupsRequest"/>
-			<wsdl:output message="intf:getUserUserGroupsResponse" name="getUserUserGroupsResponse"/>
+		<wsdl:operation name="getUserGroupGroupRoles" parameterOrder="userId groupId">
+			<wsdl:input message="intf:getUserGroupGroupRolesRequest" name="getUserGroupGroupRolesRequest"/>
+			<wsdl:output message="intf:getUserGroupGroupRolesResponse" name="getUserGroupGroupRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="unsetGroupUserGroups" parameterOrder="groupId userGroupIds">
-			<wsdl:input message="intf:unsetGroupUserGroupsRequest" name="unsetGroupUserGroupsRequest"/>
-			<wsdl:output message="intf:unsetGroupUserGroupsResponse" name="unsetGroupUserGroupsResponse"/>
+		<wsdl:operation name="getUserGroupRoles" parameterOrder="userId groupId">
+			<wsdl:input message="intf:getUserGroupRolesRequest" name="getUserGroupRolesRequest"/>
+			<wsdl:output message="intf:getUserGroupRolesResponse" name="getUserGroupRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="unsetTeamUserGroups" parameterOrder="teamId userGroupIds">
-			<wsdl:input message="intf:unsetTeamUserGroupsRequest" name="unsetTeamUserGroupsRequest"/>
-			<wsdl:output message="intf:unsetTeamUserGroupsResponse" name="unsetTeamUserGroupsResponse"/>
+		<wsdl:operation name="getUserRelatedRoles" parameterOrder="userId groups">
+			<wsdl:input message="intf:getUserRelatedRolesRequest" name="getUserRelatedRolesRequest"/>
+			<wsdl:output message="intf:getUserRelatedRolesResponse" name="getUserRelatedRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="updateUserGroup" parameterOrder="userGroupId name description">
-			<wsdl:input message="intf:updateUserGroupRequest" name="updateUserGroupRequest"/>
-			<wsdl:output message="intf:updateUserGroupResponse" name="updateUserGroupResponse"/>
+		<wsdl:operation name="getUserRoles" parameterOrder="userId">
+			<wsdl:input message="intf:getUserRolesRequest" name="getUserRolesRequest"/>
+			<wsdl:output message="intf:getUserRolesResponse" name="getUserRolesResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="updateUserGroup" parameterOrder="userGroupId name description serviceContext">
-			<wsdl:input message="intf:updateUserGroupRequest1" name="updateUserGroupRequest1"/>
-			<wsdl:output message="intf:updateUserGroupResponse1" name="updateUserGroupResponse1"/>
+		<wsdl:operation name="hasUserRole" parameterOrder="userId companyId name inherited">
+			<wsdl:input message="intf:hasUserRoleRequest" name="hasUserRoleRequest"/>
+			<wsdl:output message="intf:hasUserRoleResponse" name="hasUserRoleResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="hasUserRoles" parameterOrder="userId companyId names inherited">
+			<wsdl:input message="intf:hasUserRolesRequest" name="hasUserRolesRequest"/>
+			<wsdl:output message="intf:hasUserRolesResponse" name="hasUserRolesResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="unsetUserRoles" parameterOrder="userId roleIds">
+			<wsdl:input message="intf:unsetUserRolesRequest" name="unsetUserRolesRequest"/>
+			<wsdl:output message="intf:unsetUserRolesResponse" name="unsetUserRolesResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="updateRole" parameterOrder="roleId name titleMapLanguageIds titleMapValues descriptionMapLanguageIds descriptionMapValues subtype serviceContext">
+			<wsdl:input message="intf:updateRoleRequest" name="updateRoleRequest"/>
+			<wsdl:output message="intf:updateRoleResponse" name="updateRoleResponse"/>
 		</wsdl:operation>
 	</wsdl:portType>
-	<wsdl:binding name="Portal_UserGroupServiceSoapBinding" type="intf:UserGroupServiceSoap">
+	<wsdl:binding name="Portal_RoleServiceSoapBinding" type="intf:RoleServiceSoap">
 		<wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-		<wsdl:operation name="addGroupUserGroups">
+		<wsdl:operation name="addRole">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="addGroupUserGroupsRequest">
+			<wsdl:input name="addRoleRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="addGroupUserGroupsResponse">
+			<wsdl:output name="addRoleResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="addTeamUserGroups">
+		<wsdl:operation name="addUserRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="addTeamUserGroupsRequest">
+			<wsdl:input name="addUserRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="addTeamUserGroupsResponse">
+			<wsdl:output name="addUserRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="addUserGroup">
+		<wsdl:operation name="deleteRole">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="addUserGroupRequest">
+			<wsdl:input name="deleteRoleRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="addUserGroupResponse">
+			<wsdl:output name="deleteRoleResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="addUserGroup">
+		<wsdl:operation name="fetchRole">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="addUserGroupRequest1">
+			<wsdl:input name="fetchRoleRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="addUserGroupResponse1">
+			<wsdl:output name="fetchRoleResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="deleteUserGroup">
+		<wsdl:operation name="getGroupRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="deleteUserGroupRequest">
+			<wsdl:input name="getGroupRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="deleteUserGroupResponse">
+			<wsdl:output name="getGroupRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="fetchUserGroup">
+		<wsdl:operation name="getRole">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="fetchUserGroupRequest">
+			<wsdl:input name="getRoleRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="fetchUserGroupResponse">
+			<wsdl:output name="getRoleResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="getUserGroup">
+		<wsdl:operation name="getRole">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="getUserGroupRequest">
+			<wsdl:input name="getRoleRequest1">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="getUserGroupResponse">
+			<wsdl:output name="getRoleResponse1">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="getUserGroup">
+		<wsdl:operation name="getRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="getUserGroupRequest1">
+			<wsdl:input name="getRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="getUserGroupResponse1">
+			<wsdl:output name="getRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="getUserGroups">
+		<wsdl:operation name="getRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="getUserGroupsRequest">
+			<wsdl:input name="getRolesRequest1">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="getUserGroupsResponse">
+			<wsdl:output name="getRolesResponse1">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="getUserUserGroups">
+		<wsdl:operation name="getUserGroupGroupRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="getUserUserGroupsRequest">
+			<wsdl:input name="getUserGroupGroupRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="getUserUserGroupsResponse">
+			<wsdl:output name="getUserGroupGroupRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="unsetGroupUserGroups">
+		<wsdl:operation name="getUserGroupRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="unsetGroupUserGroupsRequest">
+			<wsdl:input name="getUserGroupRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="unsetGroupUserGroupsResponse">
+			<wsdl:output name="getUserGroupRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="unsetTeamUserGroups">
+		<wsdl:operation name="getUserRelatedRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="unsetTeamUserGroupsRequest">
+			<wsdl:input name="getUserRelatedRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="unsetTeamUserGroupsResponse">
+			<wsdl:output name="getUserRelatedRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="updateUserGroup">
+		<wsdl:operation name="getUserRoles">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="updateUserGroupRequest">
+			<wsdl:input name="getUserRolesRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="updateUserGroupResponse">
+			<wsdl:output name="getUserRolesResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="updateUserGroup">
+		<wsdl:operation name="hasUserRole">
 			<wsdlsoap:operation soapAction=""/>
-			<wsdl:input name="updateUserGroupRequest1">
+			<wsdl:input name="hasUserRoleRequest">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:input>
-			<wsdl:output name="updateUserGroupResponse1">
+			<wsdl:output name="hasUserRoleResponse">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="hasUserRoles">
+			<wsdlsoap:operation soapAction=""/>
+			<wsdl:input name="hasUserRolesRequest">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
+			</wsdl:input>
+			<wsdl:output name="hasUserRolesResponse">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="unsetUserRoles">
+			<wsdlsoap:operation soapAction=""/>
+			<wsdl:input name="unsetUserRolesRequest">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
+			</wsdl:input>
+			<wsdl:output name="unsetUserRolesResponse">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="updateRole">
+			<wsdlsoap:operation soapAction=""/>
+			<wsdl:input name="updateRoleRequest">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
+			</wsdl:input>
+			<wsdl:output name="updateRoleResponse">
 				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:http.service.portal.liferay.com" use="encoded"/>
 			</wsdl:output>
 		</wsdl:operation>
 	</wsdl:binding>
-	<wsdl:service name="UserGroupServiceSoapService">
-		<wsdl:port binding="intf:Portal_UserGroupServiceSoapBinding" name="Portal_UserGroupService">
-			<wsdlsoap:address location="http://127.0.0.1:8080/api/axis/Portal_UserGroupService"/>
+	<wsdl:service name="RoleServiceSoapService">
+		<wsdl:port binding="intf:Portal_RoleServiceSoapBinding" name="Portal_RoleService">
+			<wsdlsoap:address location="http://127.0.0.1:8080/api/axis/Portal_RoleService"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>

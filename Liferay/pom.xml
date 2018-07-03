@@ -7,6 +7,7 @@
     <groupId>zwj.kyq</groupId>
     <artifactId>liferay-client</artifactId>
     <version>7.0.0</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <!--========= liferay webservice调用依赖包 ==================================-->
