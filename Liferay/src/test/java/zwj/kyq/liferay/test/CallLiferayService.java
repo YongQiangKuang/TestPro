@@ -98,7 +98,6 @@ public class CallLiferayService {
 //                        "zh_CN","文思"+i,null, "李",0,0,true,1,1,1970,null,null,null,null,userGroupIds,false,serviceContext);
 //                serviceUser.updateStatus(userSoap.getUserId(), 0);
 //            }
-            //47173
 
             UserSoap userSoap = serviceUser.addUser(LIFERAY_COMPANY_INSTANCE_ID_,
                         true,"gggg","gggg",
