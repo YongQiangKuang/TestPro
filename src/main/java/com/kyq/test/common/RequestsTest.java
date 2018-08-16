@@ -7,6 +7,7 @@ import net.dongliu.requests.body.Part;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Description:
@@ -29,7 +30,7 @@ public class RequestsTest {
         params.put("postData","{}");
         params.put("start",1);
         params.put("limit",5);
-
+        String s = (String) Optional.ofNullable(params).map(x->x.get("aaa")).orElse("didi");
 
 //        Requests.post(url)
 //                .multiPartBody(

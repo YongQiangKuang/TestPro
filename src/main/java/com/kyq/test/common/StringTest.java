@@ -1,7 +1,8 @@
 package com.kyq.test.common;
 
 import java.sql.Timestamp;
-import java.util.Calendar;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Description:
@@ -15,6 +16,10 @@ import java.util.Calendar;
  */
 public class StringTest {
     public static void main(String args[]){
+        String as[] = new String[]{"aaa","nnn"};
+        Arrays.asList(as);
+        System.out.println();
+
 //        System.gc();
 //        cutYear();
 //        "11010111 0001 110001 110000 110000 110001 110101 110000 110000 110101 110001 110100 110000 110001 110010";
@@ -22,11 +27,14 @@ public class StringTest {
 //        substest();
 //        Timestamp timestamp = Timestamp.valueOf("2018-06-28 17:27:58.000000");
 //        System.out.println(timestamp);
-
-        Long l = new Long(1521);
-        long s = 2312L;
-        System.out.println(l+"");
-        System.out.println(s+"");
+//        String s = "aaaa,aaaa";
+//        String t[] = s.split(",");
+//        System.out.println(new HashSet<>().add(""));
+//        Long l = new Long(1521);
+//        long s = 2312L;
+//        System.out.println(l+"");
+//        System.out.println(s+"");
+//        testVolatile();
     }
 
     public static void substest(){
@@ -48,5 +56,24 @@ public class StringTest {
         }
         System.out.println(result);
         return result;
+    }
+
+    private static void testVolatile(){
+        List array = new ArrayList<>();
+        for(int i=0;i<100000;i++){
+            array.add(i);
+        }
+        AtomicInteger a = new AtomicInteger(0);
+        long startA = System.currentTimeMillis();
+        array.stream().forEach(x->a.incrementAndGet());
+        long endA = System.currentTimeMillis();
+
+        AtomicInteger b = new AtomicInteger(0);
+        long startB = System.currentTimeMillis();
+        array.parallelStream().forEach(x->b.incrementAndGet());
+        long endB = System.currentTimeMillis();
+        System.out.println("a:"+a.get()+"  cost:"+(endA-startA));
+        System.out.println("b:"+b.get()+"  cost:"+(endB-startB));
+
     }
 }

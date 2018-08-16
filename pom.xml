@@ -17,8 +17,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -193,6 +193,26 @@
             <version>1.1.1</version>
         </dependency>
         <!--========= ./liferay webservice调用依赖包 ==================================-->
+
+        <!-- https://mvnrepository.com/artifact/com.warrenstrange/googleauth -->
+        <dependency>
+            <groupId>com.warrenstrange</groupId>
+            <artifactId>googleauth</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.cheergoivan/totp-authenticator -->
+        <dependency>
+            <groupId>com.github.cheergoivan</groupId>
+            <artifactId>totp-authenticator</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.8</version>
+        </dependency>
     </dependencies>
 
     <repositories>
