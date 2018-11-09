@@ -1,9 +1,9 @@
 package com.kyq.test.liferay;
 
 
-import com.liferay.client.soap.portal.model.UserSoap;
-import com.liferay.client.soap.portal.service.http.UserServiceSoap;
-import com.liferay.client.soap.portal.service.http.UserServiceSoapServiceLocator;
+//import com.liferay.client.soap.portal.model.UserSoap;
+//import com.liferay.client.soap.portal.service.http.UserServiceSoap;
+//import com.liferay.client.soap.portal.service.http.UserServiceSoapServiceLocator;
 
 import javax.xml.rpc.ServiceException;
 import java.net.MalformedURLException;
@@ -36,21 +36,21 @@ public class CallLiferayService {
     }
 
     private void portalClient(){
-        UserServiceSoapServiceLocator locator = new UserServiceSoapServiceLocator();
-        UserServiceSoap portalUserService = null;
-        try {
-            portalUserService = locator.getPortal_UserService(getURL("Portal_UserService"));
-        } catch (ServiceException e) {
-            e.printStackTrace();
-        }
-        try {
-            //38911L
-            UserSoap userSoap = portalUserService.getUserById(38911L);
-            System.out.println("userContact:"+userSoap.getContactId()+"");
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
-
+//        UserServiceSoapServiceLocator locator = new UserServiceSoapServiceLocator();
+//        UserServiceSoap portalUserService = null;
+//        try {
+//            portalUserService = locator.getPortal_UserService(getURL("Portal_UserService"));
+//        } catch (ServiceException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            //38911L
+//            UserSoap userSoap = portalUserService.getUserById(38911L);
+//            System.out.println("userContact:"+userSoap.getContactId()+"");
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        }
+//
 
     }
 }

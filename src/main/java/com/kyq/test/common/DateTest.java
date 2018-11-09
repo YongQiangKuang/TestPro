@@ -27,7 +27,8 @@ public class DateTest {
 
     }
     public static void timeZoneChange(){
-        String str = "2018-04-25 09:28:09";//PDT时间
+        //PDT时间
+        String str = "2018-04-25 09:28:09";
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             format.setTimeZone(TimeZone.getTimeZone("UTC"));
