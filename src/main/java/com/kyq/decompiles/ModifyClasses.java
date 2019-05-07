@@ -22,7 +22,12 @@ public class ModifyClasses {
             CtClass cc1 = pool.get("com.pro.encryption.entrance.report.ReportEntrance");
             CtMethod method = cc1.getDeclaredMethod("auth");
             method.insertBefore("{if(true){" +
-                    " com.pro.encryption.entrance.report.g v0001 = new com.pro.encryption.entrance.report.g();v0001.ALLATORIxDEMO(true);v0001.ALLATORIxDEMO(\"1\");v0001.M(\"01\");v0001.i(\"授权正常\");return v0001;} " +
+                    " com.pro.encryption.entrance.report.g v0001 = new com.pro.encryption.entrance.report.g();" +
+                    "v0001.ALLATORIxDEMO(true);" +
+                    "v0001.ALLATORIxDEMO(\"1\");" +
+                    "v0001.M(\"01\");" +
+                    "v0001.i(\"授权正常\");" +
+                    "return v0001;} " +
                     "}");
             cc1.writeFile();
         } catch (NotFoundException e) {
