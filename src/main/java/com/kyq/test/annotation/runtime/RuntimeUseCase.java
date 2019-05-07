@@ -9,7 +9,7 @@ package com.kyq.test.annotation.runtime;
  * @author: kyq1024
  * @timestamp: 2017-12-10 21:54
  */
-@RuntimeAnnotationEx("ExRuntime")
+@AnnoEx1
 public class RuntimeUseCase {
     private void test1(){
         System.out.println("test1");

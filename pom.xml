@@ -35,6 +35,12 @@
     </build>
 
     <dependencies>
+        <!-- 谷歌开源工具包 https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0-jre</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
         <dependency>
             <groupId>cglib</groupId>
@@ -309,6 +315,23 @@
             <artifactId>spring-data-redis</artifactId>
             <version>1.8.10.RELEASE</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.gjt.jclasslib/jclasslib-browser -->
+        <dependency>
+            <groupId>org.gjt.jclasslib</groupId>
+            <artifactId>jclasslib-library</artifactId>
+            <version>5.3</version>
+        </dependency>
+
+
 
     </dependencies>
 
