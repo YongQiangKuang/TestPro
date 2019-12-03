@@ -165,11 +165,11 @@
         <!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/com.liferay.portal/portal-client -->
-        <!--<dependency>-->
-            <!--<groupId>com.liferay.portal</groupId>-->
-            <!--<artifactId>portal-client</artifactId>-->
-            <!--<version>7.0.0-local</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>portal-client</artifactId>
+            <version>7.0.0-local</version>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
@@ -333,6 +333,28 @@
 
 
 
+        <!--  阿里云oos sdk      -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <!--    JSON Schema    -->
+        <dependency>
+            <groupId>com.jfinal</groupId>
+            <artifactId>jfinal</artifactId>
+            <version>4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+            <version>5.0.5</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -359,6 +381,14 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-bluezio-maven</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/bluezio/maven</url>
         </repository>
 
         <repository>
