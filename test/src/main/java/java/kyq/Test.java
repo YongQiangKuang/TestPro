@@ -1,4 +1,4 @@
-package jav.kyq;
+package java.kyq;
 
 /**
  * Description: 该类用于论证java的包名不能以“java.*”开头。执行该例子会抛出:
